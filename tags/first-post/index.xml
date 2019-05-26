@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>First Post on Sc0rpi0n&#39;s Journey</title>
+    <link>https://sc0rpi0n101.github.io/tags/first-post/</link>
+    <description>Recent content in First Post on Sc0rpi0n&#39;s Journey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sc0rpi0n101.github.io/tags/first-post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Welcome to My Journey</title>
+      <link>https://sc0rpi0n101.github.io/2019/04/welcome-to-my-journey/</link>
+      <pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sc0rpi0n101.github.io/2019/04/welcome-to-my-journey/</guid>
+      <description>Hello Everyone, I am Nikhil Maan aka Sc0rpi0n101. I am a Junior at Amity University, Noida with a Computer Science Major . I am currently creating a C and Fortran Parser for SymPy as a GSoC 2019 project. Welcome to my life and be ready to travel with me in my Journey in the tech and the open-source world.
+This blog will also serve as the blog for my GSoC 2019 Project Blog.</description>
+    </item>
+    
+  </channel>
+</rss>
