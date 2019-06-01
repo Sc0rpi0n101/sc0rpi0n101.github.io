@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sc0rpi0n&#39;s Journey</title>
-    <link>https://sc0rpi0n101.github.io/</link>
-    <description>Recent content on Sc0rpi0n&#39;s Journey</description>
+    <title>Gsoc on Sc0rpi0n&#39;s Journey</title>
+    <link>https://sc0rpi0n101.github.io/categories/gsoc/</link>
+    <description>Recent content in Gsoc on Sc0rpi0n&#39;s Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 31 May 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sc0rpi0n101.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sc0rpi0n101.github.io/categories/gsoc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>https://sc0rpi0n101.github.io/2019/05/week-1-let-the-grind-begin/</guid>
       <description>Welcome everyone, I am your host Nikhil Maan aka Sc0rpi0n101 and I will be barraging you with blogs of my progress with my GSoC project. This is the blog for the first week of work. The official coding started May 27.
 Today is May 31, it&amp;rsquo;s been 5 days of work and I&amp;rsquo;ve had some progress since Monday and had the meeting for the first week yesterday. The week has not been as productive as I would&amp;rsquo;ve liked to be but I managed to get in some work.</description>
-    </item>
-    
-    <item>
-      <title>Welcome to My Journey</title>
-      <link>https://sc0rpi0n101.github.io/2019/04/welcome-to-my-journey/</link>
-      <pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://sc0rpi0n101.github.io/2019/04/welcome-to-my-journey/</guid>
-      <description>Hello Everyone, I am Sc0rpi0n101(Nikhil Maan). I am a Junior at Amity University, Noida with a Computer Science Major. I am a student developer and I have worked with C/C++ for a few years and Python for a few months. I am also learning Fortran currently for my GSoC project and plan to learn full stack Python development in the hope of creating my websites and this blog in full stack instead of Hugo.</description>
     </item>
     
   </channel>
