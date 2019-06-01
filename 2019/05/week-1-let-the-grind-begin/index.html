@@ -312,7 +312,7 @@ report them so that they can be worked on soon.</p>
 <p>The typical first step to researching a project would be to look at the documentation and go through it. So, the first
 step was to find the Clang documentation but it was not easy to find. The Clang documentation is not that well updated
 and not easily available. I had to put some efforts to find the official documentation and it was only available as a
-Doxygen html render; and the story doesn&rsquo;t end there.</p>
+Doxygen HTML render; the story doesn&rsquo;t end there.</p>
 
 <p><img src="https://sc0rpi0n101.github.io/img/w1_baddocs.jpg" alt="Bad Docs" /></p>
 
@@ -321,13 +321,13 @@ in the source code and a minuscule summery. The whole documentation is full of l
 these with not much explanation and it looks very confusing and unorganized. The documentation was not very helpful
 in my research. So, I had to turn to manually go through the source code to find any use of Clang.</p>
 
-<p>While going through the source code, I did found some code that would be useful in my project. During the research, I
+<p>While going through the source code, I did find some code that would be useful in my project. During the research, I
 also came across libclang, which is the C API and library for clang and it also has python wrapper functions which also
 works as a python API. The API is working properly and can be used for the parser but it might need some improvements to
 better match the requirements of SymPy.</p>
 
 <p>I also came across a few other projects similar to mine including a project that was code conversion from C++ to Python
-using libclang; but it is written in C. It has many similarities to what I&rsquo;m trying to do. I took inspiration and some
+using libclang, but it is written in C. It has many similarities to what I&rsquo;m trying to do. I took inspiration and some
 ideas from these projects and trying out small implementations of my project.</p>
 
 <h2 id="using-cppyy">Using CPPYY?</h2>
@@ -336,17 +336,17 @@ ideas from these projects and trying out small implementations of my project.</p
 
 <p>The next step for my research was to look at cppyy which is a relatively latest project using Clang and figure out if it
 will be useful. cppyy is an automatic C++-Python binding generator. It is also in some ways similar to my project and I
-wanted to see if I could use it somewhere in the project. cppyy is also using Clang to extract C++ AST, and is
+wanted to see if I could use it somewhere in the project. cppyy is also using Clang to extract C++ AST and is
 relatively faster than it&rsquo;s competition.</p>
 
-<p>In terms of it&rsquo;s usage, the AST Visitor is better in Clang and I want to use Clang to create the base for my parser.
+<p>In terms of its usage, the AST Visitor is better in Clang and I want to use Clang to create the base for my parser.
 cppyy does have C++ to python bindings and source code for that can be used and some of the implementations can be
 useful in the project.  So, I will be using cppyy to improve the parser after basing it on Clang to extract the AST.</p>
 
 <p>Now that the plan for C parser is decided and the work is in motion, it&rsquo;s time to talk about the Fortran part. I do not
 have much experience with Fortran but I been practicing using Fortran for this project. LFortran is also a compiler that
 I&rsquo;ve not used till now. So, I needed to learn more about LFortran first before trying to use it for parsing. The first
-step to exploring LFortran is also to read through it&rsquo;s documentation.</p>
+step to exploring LFortran is also to read through its documentation.</p>
 
 <h2 id="lfortran">LFortran</h2>
 
@@ -356,7 +356,7 @@ step to exploring LFortran is also to read through it&rsquo;s documentation.</p>
 The LFortran documentation was significantly better than the Clang documentation I had to power through previously. The
 LFortran documentation was a walk in the park as compared to the Clang Documentation. It was well organized, rendered
 and pretty useful for beginners. It could still be improved, and I have some ideas regarding that but it is still
-helpful. It has some examples how to use the ASR and AST and helped me start with some small implementations.</p>
+helpful. It has some examples of how to use the ASR and AST and helped me start with some small implementations.</p>
 
 <p>Having gone through the documentation and learning to use the compiler, it was now the time to go through the actual
 source code and source code and figure out how I was going to use it. LFortran generates the Abstract Syntax Tree (AST)
@@ -365,7 +365,7 @@ So, the ASR can be extracted from the source code using only LFortran which can 
 directly to SymPy syntax.</p>
 
 <p>This has been my progress with the project in the last 4 days; as you all can see, it is very apparent that most of the
-work has been research and I have only started working on the implementations. So. came Thursday, May 30; it was time
+work has been researching and I have only started working on the implementations. So. came Thursday, May 30; it was time
 for the Week 1 meeting and time to discuss with my mentors what work had been done and what was to be done next.</p>
 
 <h2 id="the-meeting">The Meeting</h2>
@@ -376,7 +376,7 @@ for the Week 1 meeting and time to discuss with my mentors what work had been do
 reading about that. So, here is a summary of the meeting for the ones that are still curious:</p>
 
 <ul>
-<li>Create a small implementation for Fortran to SymPy conversion using one of the examples form LFortran Doumentation.</li>
+<li>Create a small implementation for Fortran to SymPy conversion using one of the examples form LFortran Documentation.</li>
 <li>Create a PR in SymPy for the implementation</li>
 <li>Work on the Clang conversion and create a SymPy PR to discuss the code.</li>
 <li>Complete the Week 1 and Week 0 blog post.</li>
