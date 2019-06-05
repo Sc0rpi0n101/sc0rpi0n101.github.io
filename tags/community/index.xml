@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GSoC on Sc0rpi0n&#39;s Journey</title>
-    <link>https://sc0rpi0n101.github.io/tags/gsoc/</link>
-    <description>Recent content in GSoC on Sc0rpi0n&#39;s Journey</description>
+    <title>Community on Sc0rpi0n&#39;s Journey</title>
+    <link>https://sc0rpi0n101.github.io/tags/community/</link>
+    <description>Recent content in Community on Sc0rpi0n&#39;s Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sc0rpi0n101.github.io/tags/gsoc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sc0rpi0n101.github.io/tags/community/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <description>Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and today I would like to tell you about the Community Bonding Period of GSoC 2019 and also talk about my project and organization in detail.
  GSoC My Project The Organizations Community Bonding Period  ##GSoC
 Google Summer of Code (GSoC) is a 12-week program, sponsored by Google to promote open-source among various college students around the world, where the people selected are assigned to projects from different open-source organizations working over the summer contributing to open-source software.</description>
-    </item>
-    
-    <item>
-      <title>Week 1: Let the Grind Begin</title>
-      <link>https://sc0rpi0n101.github.io/2019/05/week-1-let-the-grind-begin/</link>
-      <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://sc0rpi0n101.github.io/2019/05/week-1-let-the-grind-begin/</guid>
-      <description>Welcome everyone, I am your host Nikhil Maan aka Sc0rpi0n101 and I will be barraging you with blogs of my progress with my GSoC project. This is the blog for the first week of work. The official coding started May 27.
-Today is May 31, it&amp;rsquo;s been 5 days of work and I&amp;rsquo;ve had some progress since Monday and had the meeting for the first week yesterday. The week has not been as productive as I would&amp;rsquo;ve liked to be but I managed to get in some work.</description>
     </item>
     
   </channel>

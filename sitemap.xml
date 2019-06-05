@@ -3,41 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sc0rpi0n101.github.io/2019/05/week-1-let-the-grind-begin/</loc>
-    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sc0rpi0n101.github.io/2019/04/welcome-to-my-journey/</loc>
-    <lastmod>2019-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sc0rpi0n101.github.io/archives/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://sc0rpi0n101.github.io/categories/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sc0rpi0n101.github.io/tags/first-post/</loc>
-    <lastmod>2019-04-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sc0rpi0n101.github.io/tags/gsoc/</loc>
-    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
+    <loc>https://sc0rpi0n101.github.io/tags/community/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sc0rpi0n101.github.io/categories/gsoc/</loc>
-    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/tags/gsoc/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/post/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/categories/sympy/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/tags/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/2019/06/week-0-communtiy-bonding-period-a-new-beginning/</loc>
+    <lastmod>2019-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -47,32 +62,29 @@
   </url>
   
   <url>
-    <loc>https://sc0rpi0n101.github.io/post/</loc>
+    <loc>https://sc0rpi0n101.github.io/2019/05/week-1-let-the-grind-begin/</loc>
     <lastmod>2019-05-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sc0rpi0n101.github.io/</loc>
-    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sc0rpi0n101.github.io/categories/sympy/</loc>
-    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sc0rpi0n101.github.io/tags/</loc>
-    <lastmod>2019-04-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sc0rpi0n101.github.io/categories/welcome/</loc>
     <lastmod>2019-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/2019/04/welcome-to-my-journey/</loc>
+    <lastmod>2019-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/tags/first-post/</loc>
+    <lastmod>2019-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/archives/</loc>
     <priority>0</priority>
   </url>
   

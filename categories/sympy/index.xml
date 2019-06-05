@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sympy on Sc0rpi0n&#39;s Journey</title>
+    <title>SymPy on Sc0rpi0n&#39;s Journey</title>
     <link>https://sc0rpi0n101.github.io/categories/sympy/</link>
-    <description>Recent content in Sympy on Sc0rpi0n&#39;s Journey</description>
+    <description>Recent content in SymPy on Sc0rpi0n&#39;s Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sc0rpi0n101.github.io/categories/sympy/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 0: Communtiy Bonding Period - A new Beginning</title>
+      <link>https://sc0rpi0n101.github.io/2019/06/week-0-communtiy-bonding-period-a-new-beginning/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sc0rpi0n101.github.io/2019/06/week-0-communtiy-bonding-period-a-new-beginning/</guid>
+      <description>Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and today I would like to tell you about the Community Bonding Period of GSoC 2019 and also talk about my project and organization in detail.
+ GSoC My Project The Organizations Community Bonding Period  ##GSoC
+Google Summer of Code (GSoC) is a 12-week program, sponsored by Google to promote open-source among various college students around the world, where the people selected are assigned to projects from different open-source organizations working over the summer contributing to open-source software.</description>
+    </item>
     
     <item>
       <title>Week 1: Let the Grind Begin</title>
