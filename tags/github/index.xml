@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Parsing on Sc0rpi0n&#39;s Journey</title>
-    <link>https://sc0rpi0n101.github.io/tags/parsing/</link>
-    <description>Recent content in Parsing on Sc0rpi0n&#39;s Journey</description>
+    <title>Github on Sc0rpi0n&#39;s Journey</title>
+    <link>https://sc0rpi0n101.github.io/tags/github/</link>
+    <description>Recent content in Github on Sc0rpi0n&#39;s Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sc0rpi0n101.github.io/tags/parsing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sc0rpi0n101.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -24,16 +24,6 @@ Finally, the Pull Request
 The Meeting for the Week
 The Next Week
 The Weekend after the Meeting The plan for the week was discussed in the meeting held on May 30 which was to post a PR with the Clang work and get on track with LFortran with the developer examples in the developer tutorial and post a PR if possible.</description>
-    </item>
-    
-    <item>
-      <title>Week 1: Let the Grind Begin</title>
-      <link>https://sc0rpi0n101.github.io/2019/05/week-1-let-the-grind-begin/</link>
-      <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://sc0rpi0n101.github.io/2019/05/week-1-let-the-grind-begin/</guid>
-      <description>Welcome everyone, I am your host Nikhil Maan aka Sc0rpi0n101 and I will be barraging you with blogs of my progress with my GSoC project. This is the blog for the first week of work. The official coding started May 27.
-Today is May 31, it&amp;rsquo;s been 5 days of work and I&amp;rsquo;ve had some progress since Monday and had the meeting for the first week yesterday. The week has not been as productive as I would&amp;rsquo;ve liked to be but I managed to get in some work.</description>
     </item>
     
   </channel>
