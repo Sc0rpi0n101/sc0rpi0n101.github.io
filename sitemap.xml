@@ -9,6 +9,12 @@
   </url>
   
   <url>
+    <loc>https://sc0rpi0n101.github.io/tags/fortran/</loc>
+    <lastmod>2019-06-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://sc0rpi0n101.github.io/tags/gsoc/</loc>
     <lastmod>2019-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -27,7 +33,19 @@
   </url>
   
   <url>
+    <loc>https://sc0rpi0n101.github.io/tags/linux/</loc>
+    <lastmod>2019-06-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://sc0rpi0n101.github.io/tags/open-source/</loc>
+    <lastmod>2019-06-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/tags/operating-systems/</loc>
     <lastmod>2019-06-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -64,6 +82,11 @@
   
   <url>
     <loc>https://sc0rpi0n101.github.io/2019/06/week-2-a-tale-of-the-illusive-pull-request/</loc>
+    <lastmod>2019-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/</loc>
     <lastmod>2019-06-08T00:00:00+00:00</lastmod>
   </url>
   
