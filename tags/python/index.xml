@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Sc0rpi0n&#39;s Journey</title>
+    <link>https://sc0rpi0n101.github.io/tags/python/</link>
+    <description>Recent content in Python on Sc0rpi0n&#39;s Journey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sc0rpi0n101.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Week 5: The Evaluation is here: End of Phase 1</title>
+      <link>https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/</link>
+      <pubDate>Sat, 22 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/</guid>
+      <description>&amp;ldquo;On two occasions I have been asked [by members of Parliament!]: &amp;lsquo;Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out ?&amp;rsquo; I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.&amp;rdquo; — Charles Babbage
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was the last week of Phase-1 and the evaluations for the first phase.</description>
+    </item>
+    
+  </channel>
+</rss>

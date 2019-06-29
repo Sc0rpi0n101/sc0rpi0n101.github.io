@@ -17,9 +17,18 @@
       <pubDate>Sat, 22 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/06/week-4-the-fortran-parser-is-finally-here/</guid>
-      <description>&amp;ldquo;When someone says: &amp;lsquo;I want a programming language in which I need only say what I wish done&amp;rsquo;, give him a lollipop.&amp;rdquo; — Alan J. Perlis in Software Metrics
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week has been relatively a little odd. The week started a little slow but slowly it turned out to be a good and productive week.
- A Slow Start LFortran Testing Finally, The Missing Pull Request The Long Awaited Meeting What now?</description>
+      <description>&amp;ldquo;When someone says: &amp;lsquo;I want a programming language in which I need only say what I wish done&amp;rsquo;, give him a lollipop.&amp;rdquo;  — Alan J. Perlis in Software Metrics
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week has been relatively a little odd. The week started a little slow but slowly it turned out to be a good and productive week.</description>
+    </item>
+    
+    <item>
+      <title>Week 5: The Evaluation is here: End of Phase 1</title>
+      <link>https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/</link>
+      <pubDate>Sat, 22 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/</guid>
+      <description>&amp;ldquo;On two occasions I have been asked [by members of Parliament!]: &amp;lsquo;Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out ?&amp;rsquo; I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.&amp;rdquo; — Charles Babbage
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was the last week of Phase-1 and the evaluations for the first phase.</description>
     </item>
     
     <item>
@@ -28,7 +37,7 @@
       <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/</guid>
-      <description>“How did it get so late so soon?” ― Dr. Seuss
+      <description>“How did it get so late so soon?”  ― Dr. Seuss
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we&amp;rsquo;re running late on everything this week. This time we will talk about some operating system stuff along with the week&amp;rsquo;s work. I will have more blogs on operating systems and that type of stuff soon. For now, let&amp;rsquo;s talk about what&amp;rsquo;s happening.
 Why so Late?</description>
     </item>
