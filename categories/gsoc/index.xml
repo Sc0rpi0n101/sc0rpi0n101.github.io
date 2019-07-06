@@ -6,10 +6,20 @@
     <description>Recent content in GSoC on Sc0rpi0n&#39;s Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sc0rpi0n101.github.io/categories/gsoc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 6: The Most Chaotic Week Ever!!</title>
+      <link>https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/</guid>
+      <description>“A language that doesn&amp;rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&amp;rsquo;s Codegen AST from Python AST all in one week.</description>
+    </item>
     
     <item>
       <title>Week 5: The Evaluation is here: End of Phase 1</title>

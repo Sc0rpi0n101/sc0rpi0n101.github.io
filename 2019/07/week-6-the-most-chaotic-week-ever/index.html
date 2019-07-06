@@ -7,34 +7,30 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Nikhil Maan">
-<meta name="keywords" content="SymPy, GSoC, Parsing, Github, open source, arch, linux, windows, technology, open source, blog, gsoc, python, fortran, parsing, linux, sympy, programming, coding, coder, programmer">
-<meta name="description" content="“How did it get so late so soon?”  ― Dr. Seuss
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we&rsquo;re running late on everything this week. This time we will talk about some operating system stuff along with the week&rsquo;s work. I will have more blogs on operating systems and that type of stuff soon. For now, let&rsquo;s talk about what&rsquo;s happening.
-Why so Late?">
+<meta name="keywords" content="SymPy, GSoC, Parsing, Github, open source, Fortran, lfortran, blog, technology, open source, blog, gsoc, python, fortran, parsing, linux, sympy, programming, coding, coder, programmer">
+<meta name="description" content="“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.">
 
 
-<meta property="og:description" content="“How did it get so late so soon?”  ― Dr. Seuss
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we&rsquo;re running late on everything this week. This time we will talk about some operating system stuff along with the week&rsquo;s work. I will have more blogs on operating systems and that type of stuff soon. For now, let&rsquo;s talk about what&rsquo;s happening.
-Why so Late?">
+<meta property="og:description" content="“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Week 3: What&#39;s Happening? Where have I been?">
-<meta name="twitter:title" content="Week 3: What&#39;s Happening? Where have I been?">
-<meta property="og:url" content="https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/">
-<meta property="twitter:url" content="https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/">
+<meta property="og:title" content="Week 6: The Most Chaotic Week Ever!!">
+<meta name="twitter:title" content="Week 6: The Most Chaotic Week Ever!!">
+<meta property="og:url" content="https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
+<meta property="twitter:url" content="https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
 <meta property="og:site_name" content="Sc0rpi0n&#39;s Journey">
-<meta property="og:description" content="“How did it get so late so soon?”  ― Dr. Seuss
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we&rsquo;re running late on everything this week. This time we will talk about some operating system stuff along with the week&rsquo;s work. I will have more blogs on operating systems and that type of stuff soon. For now, let&rsquo;s talk about what&rsquo;s happening.
-Why so Late?">
-<meta name="twitter:description" content="“How did it get so late so soon?”  ― Dr. Seuss
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we&rsquo;re running late on everything this week. This time we will talk about some operating system stuff along with the week&rsquo;s work. I will have more blogs on operating systems and that type of stuff soon. For now, let&rsquo;s talk about what&rsquo;s happening.
-Why so Late?">
+<meta property="og:description" content="“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.">
+<meta name="twitter:description" content="“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.">
 <meta property="og:locale" content="en">
 
   
-    <meta property="article:published_time" content="2019-06-16T00:00:00">
+    <meta property="article:published_time" content="2019-07-06T00:00:00">
   
   
-    <meta property="article:modified_time" content="2019-06-16T00:00:00">
+    <meta property="article:modified_time" content="2019-07-06T00:00:00">
   
   
   
@@ -52,9 +48,7 @@ Why so Late?">
     
       <meta property="article:tag" content="Open Source">
     
-      <meta property="article:tag" content="Operating Systems">
-    
-      <meta property="article:tag" content="Linux">
+      <meta property="article:tag" content="Python">
     
   
 
@@ -71,12 +65,12 @@ Why so Late?">
 
 
 
-  <meta property="og:image" content="https://sc0rpi0n101.github.io/img/ti_w3.png">
-  <meta property="twitter:image" content="https://sc0rpi0n101.github.io/img/ti_w3.png">
+  <meta property="og:image" content="https://sc0rpi0n101.github.io/img/ti_w6.jpg">
+  <meta property="twitter:image" content="https://sc0rpi0n101.github.io/img/ti_w6.jpg">
 
 
-  <meta property="og:image" content="https://sc0rpi0n101.github.io/img/cover_w3.jpg">
-  <meta property="twitter:image" content="https://sc0rpi0n101.github.io/img/cover_w3.jpg">
+  <meta property="og:image" content="https://sc0rpi0n101.github.io/img/cover_w6.jpg">
+  <meta property="twitter:image" content="https://sc0rpi0n101.github.io/img/cover_w6.jpg">
 
 
 
@@ -85,7 +79,7 @@ Why so Late?">
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/09c361d84d4ca83334b5bc0a95ac8ad2?s=640">
 
 
-    <title>Week 3: What&#39;s Happening? Where have I been?</title>
+    <title>Week 6: The Most Chaotic Week Ever!!</title>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -100,7 +94,7 @@ Why so Late?">
 
     
 
-    <link rel="canonical" href="https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/">
+    <link rel="canonical" href="https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -253,24 +247,24 @@ if (!doNotTrack) {
   <div class="post-header-cover
               text-center
               "
-       style="background-image:url('/img/cover_w3.jpg')"
+       style="background-image:url('/img/cover_w6.jpg')"
        data-behavior="1">
     
       <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Week 3: What&#39;s Happening? Where have I been?
+      Week 6: The Most Chaotic Week Ever!!
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-06-16T00:00:00Z">
+      <time itemprop="datePublished" datetime="2019-07-06T00:00:00Z">
         
   
   
   
-    June 16, 2019
+    July 6, 2019
 
 
       </time>
@@ -305,83 +299,120 @@ if (!doNotTrack) {
               
 
 <blockquote>
-<p>“How did it get so late so soon?” <br/>
-                      ― Dr. Seuss</p>
+<p>“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.” <br/>
+  ― Alan J. Perlis</p>
 </blockquote>
 
-<p>Welcome everyone, this is your host <em>Nikhil Maan</em> aka <strong>Sc0rpi0n101</strong> and we&rsquo;re running late on everything this week. This time we will talk about some operating system stuff along with the week&rsquo;s work. I will have more blogs on operating systems and that type of stuff soon. For now, let&rsquo;s talk about what&rsquo;s happening.</p>
-
-<p><a href="#why-so-late">Why so Late?</a> <br/>
-<a href="#what-about-work">What about Work?</a> <br/>
-<a href="#so-about-the-meeting">So, the Meeting?</a></p>
-
-<h2 id="why-so-late">Why so late?</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/late_w3.jpg" alt="late" /></p>
-
-<p>It all started with just some problems with Python, then LFortran also started having problems. I couldn&rsquo;t even test my transformer functions for LFortran Converters. I was having multiple problems with the setup and couldn&rsquo;t work as effectively as I wanted. I had to do something about the situation.</p>
-
-<p>Debian has always treated me well,I&rsquo;ve always liked it and always will. I will try to get back to Debian after some time. But for now, I needed to get away from Debian, it was hindering my work. So, what did I turn to after Debian disappointed me? Did I install another Linux Distro ? or did I start using Windows?</p>
-
-<h3 id="what-did-i-choose-and-why">What did I choose and why?</h3>
-
-<p><img src="https://sc0rpi0n101.github.io/img/choice_w3.jpg" alt="choice" /></p>
-
-<p>Every operating system has its own features and uses. Debian was fun and useful for the most part, but it had a lot of redundant stuff that  I never used and never would have. I didn&rsquo;t want any useless packages hanging around and cause problems for the useful packages.</p>
-
-<h4 id="windows-then">Windows then?</h4>
-
-<p><img src="https://sc0rpi0n101.github.io/img/windows_w3.jpg" alt="windows" /></p>
-
-<p>So, did I use Windows for work? As you might have already guessed if you know and have used windows, that was not the case. Windows is great for some things, but not for the type of work I wanted and needed to do. It is full of useless software that I would never have touched or even known about and windows is not known to very developer friendly. All the dependencies for every required software have to be installed manually and everything has some convoluted instructions for &ldquo;Windows&rdquo; installation and configuration. Also, after been using Debian for months, I was accustomed to the Linux file system and the windows system did not suit me now.</p>
-
-<p>That meant I went for another Linux distribution. But which one?</p>
-
-<p><img src="https://sc0rpi0n101.github.io/img/linux_w3.png" alt="linux" /></p>
-
-<p>I wanted a minimalist distro that I could configure according to my needs and not have to worry about stuff that didn&rsquo;t matter. So, I turned to an old friend <strong>Arch</strong>.</p>
-
-<h4 id="the-lord-and-savior-arch-linux">The Lord and Savior: <strong><em>Arch Linux</em></strong></h4>
-
-<p><img src="https://sc0rpi0n101.github.io/img/arch_w3.jpg" alt="arch" /></p>
-
-<p><strong>Arch Linux</strong> is a general-purpose Linux distribution that strives to provide the latest stable versions of most software by being a rolling release distribution. There are many benefits to using Arch. But the ones that were most important to me are that arch comes as an essentially minimalist distro. It comes with all the bare necessities installed and you can set up rest of the operating system according to your choice and requirements. It was perfect for my situation. I could install only the required packages not have useless stuff that could break other important stuff. If you want to know more about my Arch setup and experience, I&rsquo;ll be releasing a blog post about that soon.</p>
-
-<h3 id="what-took-me-so-long-then">What took me so long then?</h3>
-
-<p><img src="https://sc0rpi0n101.github.io/img/long_w3.jpg" alt="long" /></p>
-
-<p>As you would have already figured out, Arch needs a lot of time to set up, everything needs to installed and configured and that takes a lot of time. The editors, packages, compilers take a lot of time to configure. And after configuring all the stuff, I had to do some of the work that I had lost again. So, all that took a lot of time, but we&rsquo;re finally here.</p>
-
-<h2 id="what-about-work">What about Work?</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/work_w3.jpg" alt="work" /></p>
-
-<p>Actually, I did manage to do some work this week before the whole incident. After recovering the lost work, I did actually get some time to work on the LFortran stuff. I managed to test some of the conversion functions and I&rsquo;ve created issues for the features that were missing and required some work. You can check out the Issues at:</p>
+<p>Welcome everyone, this is your host <em>Nikhil Maan</em> aka <strong>Sc0rpi0n101</strong>  and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use <em>SymPy&rsquo;s Codegen AST</em> from <em>Python AST</em> all in one week.</p>
 
 <ul>
-<li><a href="https://gitlab.com/lfortran/lfortran/issues/121">ASR not being generated for certain features</a></li>
-<li><a href="https://gitlab.com/lfortran/lfortran/issues/123">AST for standalone statements generated as a list</a></li>
-<li><a href="https://gitlab.com/lfortran/lfortran/issues/122">Nested Function Definitions not implemented for Fortran</a></li>
+<li><a href="#chaos">CHAOS!!</a></li>
+<li><a href="#the-c-parser-now">The C Parser Now</a></li>
+<li><a href="#what-more">What more?</a></li>
+<li><a href="#the-missing-nodes">The missing Nodes</a></li>
+<li><a href="#the-meeting">The Meeting</a></li>
+<li><a href="#whats-next">What&rsquo;s Next?</a></li>
 </ul>
 
-<p>I also managed to work on a Revision for the LFortran Documentation. The Merge Request should be ready soon and I&rsquo;ll be updating the post with the link as soon as I finish it. I&rsquo;ll also update you all about the rest of the work in the upcoming blog. But you can keep yourself posted about some of it at [](). It will soon be updated and will be able to effectively convert some basic operations.</p>
+<h2 id="chaos">CHAOS!!</h2>
 
-<h2 id="so-about-the-meeting">So, About The Meeting</h2>
+<p><img src="https://sc0rpi0n101.github.io/img/chaos_w6.jpg" alt="Chaos" /></p>
 
-<p><img src="https://sc0rpi0n101.github.io/img/meeting_w3.jpg" alt="meeting" /></p>
+<p>This week has been absolute chaos, but I&rsquo;m really excited for the next week. The Uni will open for students next week and the classes will resume. I &rsquo;ve been on a hectic and irregular schedule for the past few weeks. So, it&rsquo;ll be a good chance to get a regular schedule going with the classes starting. So, the last weekend and the start of this week was spent on moving and organizing my stuff at the new place. But its all settled now.</p>
 
-<p>The meeting for this week could not be arranged as people had some personal work and were not all available to meet at the time. So, the meeting has been postponed. For now, I am to continue with the work I am currently doing and complete basic implementations for both the parsers soon. I will include the details of the meeting whenever it happens in the next week&rsquo;s post.</p>
+<p>Also, as you already knew, I was taking a few summer classes, and since the summer break ends this week, I had finals for <strong>2 classes and one lab</strong> this week. I had one of the tests on the <em>4th</em> and the other one along with the lab on the <em>5th</em>.</p>
 
-<p>This weekend, I have been busy with the Drupal Camp Delhi. The conference,camp or whatever you decide to call it, started at 9:30 and I came back home 19:30. It is exhausting to participate in something engaging for the whole day no matter how interesting it is. So, I neither had the time nor the energy to do much work, but, I did manage to slide in a couple of hours. It&rsquo;s been a great weekend and I even managed to get some rest. I will be continuing work full time tomorrow. There will also be a blog about my experience soon.</p>
+<h2 id="the-c-parser-now">The C Parser Now</h2>
 
-<p>This time the post has been delayed partly due to the above-mentioned reasons and some personal reasons. I&rsquo;ll make sure that something like this doesn&rsquo;t disturb the blog schedule and you guys get all the updates and details regularly.</p>
+<p><img src="https://sc0rpi0n101.github.io/img/my_parser_w6.jpg" alt="My Parser" /></p>
 
-<p><img src="https://sc0rpi0n101.github.io/img/more_w3.jpg" alt="more" /></p>
+<p>The Parser now uses the <em>Sympy Codegen AST</em> nodes for the expressions. The parser can generate <em>AST</em> nodes for <strong>variable declarations</strong>, <strong>basic arithmetic assignments</strong>, <strong>Function <em>declarations</em> &amp; <em>prototypes</em> with parameters</strong>, <strong>Function Calls</strong> and I&rsquo;m developing a few more features that can be implemented soon.</p>
 
-<p>I&rsquo;ll be making up for this lack of contact with the Linux and Drupal Camp blogs, all lined up for this week.</p>
+<p>If you&rsquo;re interested in knowing how the function transformations work, you can check it out <a href="https://github.com/sympy/sympy/blob/a823606b68b977e6ce55f731d8319c64236f1e3f/sympy/parsing/c/c_parser.py#L142">here</a></p>
 
-<p><strong><em>Subscribe</em> to the blog to keep up with all the blogs</strong></p>
+<p><img src="https://sc0rpi0n101.github.io/img/nice_parse_w6.jpg" alt="Parse" /></p>
+
+<p>First, the return type is determined using the return type from the C function. It
+currently supports only void, int and float data types.</p>
+
+<pre><code class="language-python">  if (c_ret_type == 'void'):
+              ret_type = none
+          elif(c_ret_type == 'int'):
+              ret_type = type = IntBaseType(String('integer'))
+          elif (c_ret_type == 'float'):
+              ret_type = FloatBaseType(String('real'))
+          else:
+  raise NotImplementedError(&quot;Variable not yet supported&quot;)
+</code></pre>
+
+<p>Then we get the variables and the body of the function from the clang AST using the following code segment.</p>
+
+<pre><code class="language-python">  while True:
+                      decl = self.transform(child)
+                      if (child.kind == cin.CursorKind.PARM_DECL):
+                          param.append(decl)
+                      elif (child.kind == cin.CursorKind.COMPOUND_STMT):
+                          for val in decl:
+                              body.append(val)
+                      else:
+  body.append(decl)
+</code></pre>
+
+<p>Then, based on the fact if the function  had a body or not, we declare a Function Definition or a function prototype.</p>
+
+<pre><code class="language-python">  if body == []:
+              function = FunctionPrototype(
+                  return_type = ret_type,
+                  name = node.spelling,
+                  parameters = param
+              )
+          else:
+              function = FunctionDefinition(
+                  return_type = ret_type,
+                  name = node.spelling,
+                  parameters = param,
+                  body = body
+  )
+</code></pre>
+
+<h2 id="what-more">What More?</h2>
+
+<p><img src="https://sc0rpi0n101.github.io/img/ast_w6.jpg" alt="AST" /></p>
+
+<p>There are still a lot of features that can be a part of the parser, some of which can be implemented with the current nodes available in <em>Clang and the Codegen AST</em>.
+Also, <em>Assignments</em> are missing from the <em>function body</em> because they create a different type of node in the <em>Clang AST</em> than the regular assignment nodes.</p>
+
+<p>These features include some of the loops like <em>for</em> and <em>while</em> loops. There are nodes available for these in both the _Clang and codegen AST_s. They can be implemented without any other requirements.</p>
+
+<p>The <em>Printing/Output functions</em> whose node are present in the <em>codegen AST</em> would require working with including files and requires more work. The <em>codegen AST</em> doesn&rsquo;t have any nodes for <strong>Class declarations</strong> currently.</p>
+
+<p><img src="https://sc0rpi0n101.github.io/img/no_class_w6.jpg" alt="No Classes" /></p>
+
+<p>The variable transformations presently only use the basic types for <em>float</em> and <em>int</em>. There are multiple types present in both the ASTs regarding different sizes and types of integers and floating points which can also be implemented.</p>
+
+<h2 id="the-missing-nodes">The Missing Nodes</h2>
+
+<p><img src="https://sc0rpi0n101.github.io/img/missing_w6.jpg" alt="Missing Nodes" /></p>
+
+<p>The <em>codegen AST</em> currently few of the nodes available in the <em>Clang AST</em> that can be implemented for code transformation. Some of the nodes include <em>Type nodes for <strong>Strings/Characters</strong></em>, there is a standalone node to declare Strings, but there are no type nodes for that.</p>
+
+<p>There are also no nodes related to classes currently like any type of <em>Class Declaration</em>, <em>constructors</em>, <em>destructors</em>, and any other related features.</p>
+
+<h2 id="the-meeting">The Meeting</h2>
+
+<p><img src="https://sc0rpi0n101.github.io/img/no_meeting_w6.jpg" alt="No Meeting" /></p>
+
+<p>The meeting this week was on <em>July 4</em>, which is the <em>Independence Day</em> for the <em>United States of America</em>. So, the meeting could not take place this time and had to be postponed.</p>
+
+<p><strong>Happy Independence Day to anyone reading this from the US. Hope you all had a great time and celebrations.</strong></p>
+
+<h2 id="what-s-next">What&rsquo;s Next?</h2>
+
+<p><img src="https://sc0rpi0n101.github.io/img/what_next_w6.jpg" alt="Next Parser" /></p>
+
+<p>The Parser in its current form, available <a href="https://github.com/sympy/sympy/pull/16974">here</a>, requires documentation and docstrings on the functions and classes present to make it more readable. It also requires a little more setup with Travis and in the setup files to make it merge ready. So, the first job for today and tomorrow is to make sure the PR passes all the tests and is up to the SymPy standards in tests and documentation. Then, repeat the same for the Fortran Parser.</p>
+
+<p><em><strong>Subscribe</strong> to the blog if you don&rsquo;t want to miss any important updates</em></p>
 
               
             </div>
@@ -400,9 +431,7 @@ if (!doNotTrack) {
 
   <a class="tag tag--primary tag--small" href="https://sc0rpi0n101.github.io/tags/open-source/">Open Source</a>
 
-  <a class="tag tag--primary tag--small" href="https://sc0rpi0n101.github.io/tags/operating-systems/">Operating Systems</a>
-
-  <a class="tag tag--primary tag--small" href="https://sc0rpi0n101.github.io/tags/linux/">Linux</a>
+  <a class="tag tag--primary tag--small" href="https://sc0rpi0n101.github.io/tags/python/">Python</a>
 
                   </div>
                 
@@ -415,7 +444,7 @@ if (!doNotTrack) {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/06/week-4-the-fortran-parser-is-finally-here/" data-tooltip="Week 4: The Fortran Parser is finally here">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml"></span>
@@ -423,7 +452,7 @@ if (!doNotTrack) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/06/week-2-a-tale-of-the-illusive-pull-request/" data-tooltip="Week 2: A Tale of The Illusive Pull Request">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/" data-tooltip="Week 5: The Evaluation is here: End of Phase 1">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -441,13 +470,13 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -495,7 +524,7 @@ if (!doNotTrack) {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/06/week-4-the-fortran-parser-is-finally-here/" data-tooltip="Week 4: The Fortran Parser is finally here">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml"></span>
@@ -503,7 +532,7 @@ if (!doNotTrack) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/06/week-2-a-tale-of-the-illusive-pull-request/" data-tooltip="Week 2: A Tale of The Illusive Pull Request">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/" data-tooltip="Week 5: The Evaluation is here: End of Phase 1">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -521,13 +550,13 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -557,13 +586,13 @@ if (!doNotTrack) {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsc0rpi0n101.github.io%2F2019%2F06%2Fweek-3-whats-happening-where-have-i-been%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsc0rpi0n101.github.io%2F2019%2F07%2Fweek-6-the-most-chaotic-week-ever%2F">
           <i class="fa fa-facebook-official"></i><span>%!(EXTRA string=Facebook)</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fsc0rpi0n101.github.io%2F2019%2F06%2Fweek-3-whats-happening-where-have-i-been%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fsc0rpi0n101.github.io%2F2019%2F07%2Fweek-6-the-most-chaotic-week-ever%2F">
           <i class="fa fa-twitter"></i><span>%!(EXTRA string=Twitter)</span>
         </a>
       </li>
@@ -828,9 +857,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/sc0rpi0n101.github.io\/2019\/06\/week-3-whats-happening-where-have-i-been\/';
+          this.page.url = 'https:\/\/sc0rpi0n101.github.io\/2019\/07\/week-6-the-most-chaotic-week-ever\/';
           
-            this.page.identifier = '\/2019\/06\/week-3-whats-happening-where-have-i-been\/'
+            this.page.identifier = '\/2019\/07\/week-6-the-most-chaotic-week-ever\/'
           
         };
         (function() {
