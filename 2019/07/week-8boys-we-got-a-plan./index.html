@@ -330,7 +330,7 @@ if (!doNotTrack) {
 
 <p><img src="https://sc0rpi0n101.github.io/img/regex_w8.jpg" alt="regex" /></p>
 
-<p>The AST might not have Binary operation nodes, but the Assignment node still supports inputs like <code>Assignment(x,'a+b+c')</code>. So, binary operations can be implemented in some way to return a string with the name of the variables and operators which can then be used for the assignment. But the user has to be careful that all the symbols used must be defined in the program before using the parser.</p>
+<p>The AST might not have Binary operation nodes, but the Assignment node still supports but it supports the Add and Mul operations from the core module of sympy which can be called using <code>Symbol</code>. So, the plan is to implement binary operations using SymPy&rsquo;s core operations.</p>
 
 <h2 id="lfortran-documentation">LFortran Documentation</h2>
 
