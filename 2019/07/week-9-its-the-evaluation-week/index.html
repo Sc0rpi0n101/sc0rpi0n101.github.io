@@ -8,29 +8,29 @@
 <meta name="generator" content="Hugo 0.54.0 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Nikhil Maan">
 <meta name="keywords" content="SymPy, GSoC, Parsing, Github, open source, Fortran, lfortran, blog, technology, open source, blog, gsoc, python, fortran, parsing, linux, sympy, programming, coding, coder, programmer">
-<meta name="description" content="“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.">
+<meta name="description" content="Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.
+ The Fortran Parser Traivs and the Tests LFortran Evaluation!!! The meeting What Now  The Fortran Parser The Fortran parser is finally complete after shifting to using SymPy&rsquo;s codegen AST. It can now parser all the stuff that the parser could do before shifting.">
 
 
-<meta property="og:description" content="“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.">
+<meta property="og:description" content="Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.
+ The Fortran Parser Traivs and the Tests LFortran Evaluation!!! The meeting What Now  The Fortran Parser The Fortran parser is finally complete after shifting to using SymPy&rsquo;s codegen AST. It can now parser all the stuff that the parser could do before shifting.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Week 6: The Most Chaotic Week Ever!!">
-<meta name="twitter:title" content="Week 6: The Most Chaotic Week Ever!!">
-<meta property="og:url" content="https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
-<meta property="twitter:url" content="https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
+<meta property="og:title" content="Week 9: It&#39;s the Evaluation Week!!">
+<meta name="twitter:title" content="Week 9: It&#39;s the Evaluation Week!!">
+<meta property="og:url" content="https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/">
+<meta property="twitter:url" content="https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/">
 <meta property="og:site_name" content="Sc0rpi0n&#39;s Journey">
-<meta property="og:description" content="“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.">
-<meta name="twitter:description" content="“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.">
+<meta property="og:description" content="Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.
+ The Fortran Parser Traivs and the Tests LFortran Evaluation!!! The meeting What Now  The Fortran Parser The Fortran parser is finally complete after shifting to using SymPy&rsquo;s codegen AST. It can now parser all the stuff that the parser could do before shifting.">
+<meta name="twitter:description" content="Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.
+ The Fortran Parser Traivs and the Tests LFortran Evaluation!!! The meeting What Now  The Fortran Parser The Fortran parser is finally complete after shifting to using SymPy&rsquo;s codegen AST. It can now parser all the stuff that the parser could do before shifting.">
 <meta property="og:locale" content="en">
 
   
-    <meta property="article:published_time" content="2019-07-06T00:00:00">
+    <meta property="article:published_time" content="2019-07-28T00:00:00">
   
   
-    <meta property="article:modified_time" content="2019-07-06T00:00:00">
+    <meta property="article:modified_time" content="2019-07-28T00:00:00">
   
   
   
@@ -65,12 +65,12 @@
 
 
 
-  <meta property="og:image" content="https://sc0rpi0n101.github.io/img/ti_w6.jpg">
-  <meta property="twitter:image" content="https://sc0rpi0n101.github.io/img/ti_w6.jpg">
+  <meta property="og:image" content="https://sc0rpi0n101.github.io/img/ti_w9.jpeg">
+  <meta property="twitter:image" content="https://sc0rpi0n101.github.io/img/ti_w9.jpeg">
 
 
-  <meta property="og:image" content="https://sc0rpi0n101.github.io/img/cover_w6.jpg">
-  <meta property="twitter:image" content="https://sc0rpi0n101.github.io/img/cover_w6.jpg">
+  <meta property="og:image" content="https://sc0rpi0n101.github.io/img/cover_w9.jpg">
+  <meta property="twitter:image" content="https://sc0rpi0n101.github.io/img/cover_w9.jpg">
 
 
 
@@ -79,7 +79,7 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/09c361d84d4ca83334b5bc0a95ac8ad2?s=640">
 
 
-    <title>Week 6: The Most Chaotic Week Ever!!</title>
+    <title>Week 9: It&#39;s the Evaluation Week!!</title>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -94,7 +94,7 @@
 
     
 
-    <link rel="canonical" href="https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
+    <link rel="canonical" href="https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -247,24 +247,24 @@ if (!doNotTrack) {
   <div class="post-header-cover
               text-center
               "
-       style="background-image:url('/img/cover_w6.jpg')"
+       style="background-image:url('/img/cover_w9.jpg')"
        data-behavior="1">
     
       <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Week 6: The Most Chaotic Week Ever!!
+      Week 9: It&#39;s the Evaluation Week!!
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-07-06T00:00:00Z">
+      <time itemprop="datePublished" datetime="2019-07-28T00:00:00Z">
         
   
   
   
-    July 6, 2019
+    July 28, 2019
 
 
       </time>
@@ -298,121 +298,70 @@ if (!doNotTrack) {
             <div class="main-content-wrap">
               
 
-<blockquote>
-<p>“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.” <br/>
-  ― Alan J. Perlis</p>
-</blockquote>
-
-<p>Welcome everyone, this is your host <em>Nikhil Maan</em> aka <strong>Sc0rpi0n101</strong>  and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use <em>SymPy&rsquo;s Codegen AST</em> from <em>Python AST</em> all in one week.</p>
+<p>Welcome everyone, this is your host <em>Nikhil Maan</em> aka <strong>Sc0rpi0n101</strong> and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.</p>
 
 <ul>
-<li><a href="#chaos">CHAOS!!</a></li>
-<li><a href="#the-c-parser-now">The C Parser Now</a></li>
-<li><a href="#what-more">What more?</a></li>
-<li><a href="#the-missing-nodes">The missing Nodes</a></li>
-<li><a href="#the-meeting">The Meeting</a></li>
-<li><a href="#whats-next">What&rsquo;s Next?</a></li>
+<li><a href="#the-fortran-parser">The Fortran Parser</a></li>
+<li><a href="#travis-and-the-tests">Traivs and the Tests</a></li>
+<li><a href="#lfortran">LFortran</a></li>
+<li><a href="#evaluations">Evaluation!!!</a></li>
+<li><a href="#the-meeting">The meeting</a></li>
+<li><a href="#what-now">What Now</a></li>
 </ul>
 
-<h2 id="chaos">CHAOS!!</h2>
+<h2 id="the-fortran-parser">The Fortran Parser</h2>
 
-<p><img src="https://sc0rpi0n101.github.io/img/chaos_w6.jpg" alt="Chaos" /></p>
+<p><img src="https://sc0rpi0n101.github.io/img/eval1_w9.jpg" alt="Evaluation Parser" /></p>
 
-<p>This week has been absolute chaos, but I&rsquo;m really excited for the next week. The Uni will open for students next week and the classes will resume. I &rsquo;ve been on a hectic and irregular schedule for the past few weeks. So, it&rsquo;ll be a good chance to get a regular schedule going with the classes starting. So, the last weekend and the start of this week was spent on moving and organizing my stuff at the new place. But its all settled now.</p>
+<p>The Fortran parser is finally complete after shifting to using SymPy&rsquo;s <em>codegen AST</em>. It can now parser all the stuff that the parser could do before shifting. The <em>assignment</em> and <em>binary operations</em> transformations have also been implemented. All the files have been documented and revised, examples and doctests have been added to help new users. Appropriate tests have also been prepared to cover all the conversions of the parser. The implementations for numbers are also ready, but commented out and can be used as soon as numbers are represented in the <em>ASR</em>. The last thing left to do before merging the <em>Pull Request</em> to get the tests passing through <strong>Travis CI</strong>.</p>
 
-<p>Also, as you already knew, I was taking a few summer classes, and since the summer break ends this week, I had finals for <strong>2 classes and one lab</strong> this week. I had one of the tests on the <em>4th</em> and the other one along with the lab on the <em>5th</em>.</p>
+<h2 id="travis-and-the-tests">Travis and the Tests</h2>
 
-<h2 id="the-c-parser-now">The C Parser Now</h2>
+<p><img src="https://sc0rpi0n101.github.io/img/build_w9.jpg" alt="Build" /></p>
 
-<p><img src="https://sc0rpi0n101.github.io/img/my_parser_w6.jpg" alt="My Parser" /></p>
+<p><strong>Travis</strong> is currently not passing the doctests as <em>lfortran</em> does not seem to be imported correctly in the <em>sphinx</em> tests. The rest of the tests are passing successfully both on Travis and on my local machine.</p>
 
-<p>The Parser now uses the <em>Sympy Codegen AST</em> nodes for the expressions. The parser can generate <em>AST</em> nodes for <strong>variable declarations</strong>, <strong>basic arithmetic assignments</strong>, <strong>Function <em>declarations</em> &amp; <em>prototypes</em> with parameters</strong>, <strong>Function Calls</strong> and I&rsquo;m developing a few more features that can be implemented soon.</p>
+<p><img src="https://sc0rpi0n101.github.io/img/testing_w9.jpg" alt="Testing" /></p>
 
-<p>If you&rsquo;re interested in knowing how the function transformations work, you can check it out <a href="https://github.com/sympy/sympy/blob/a823606b68b977e6ce55f731d8319c64236f1e3f/sympy/parsing/c/c_parser.py#L142">here</a></p>
+<p>The tests were initially written using <code>regex</code> to compare the <em>Expression</em> statements. But, <code>regex</code> tests are found to be fragile and hard to write and have to be dependent on how they are printed. So, the tests now consist of testing if the expressions belong to the right classes and comparing the whole expressions with the desired results.  The <em>expression comparison</em> is more robust and can be used to test all the aspects of the expression without being dependent on how the expressions are printed.</p>
 
-<p><img src="https://sc0rpi0n101.github.io/img/nice_parse_w6.jpg" alt="Parse" /></p>
+<h2 id="lfortran">LFortran</h2>
 
-<p>First, the return type is determined using the return type from the C function. It
-currently supports only void, int and float data types.</p>
+<p><img src="https://sc0rpi0n101.github.io/img/pack_w9.jpg" alt="Packaging" /></p>
 
-<pre><code class="language-python">  if (c_ret_type == 'void'):
-              ret_type = none
-          elif(c_ret_type == 'int'):
-              ret_type = type = IntBaseType(String('integer'))
-          elif (c_ret_type == 'float'):
-              ret_type = FloatBaseType(String('real'))
-          else:
-  raise NotImplementedError(&quot;Variable not yet supported&quot;)
-</code></pre>
+<p><strong>LFortran</strong> has been packaged for the <em>conda-forge</em> and can be installed on <em>Travis</em> successfully as a conda package. The current version of <em>LFortran(<strong>v 0.1.15</strong>)</em> with all its present features can be installed on any system using <em>Anaconda</em>.</p>
 
-<p>Then we get the variables and the body of the function from the clang AST using the following code segment.</p>
+<p><img src="https://sc0rpi0n101.github.io/img/bug_w9.jpg" alt="Bug" /></p>
 
-<pre><code class="language-python">  while True:
-                      decl = self.transform(child)
-                      if (child.kind == cin.CursorKind.PARM_DECL):
-                          param.append(decl)
-                      elif (child.kind == cin.CursorKind.COMPOUND_STMT):
-                          for val in decl:
-                              body.append(val)
-                      else:
-  body.append(decl)
-</code></pre>
+<p>While working with Functions in LFortran, I also encountered a new bug. The Function Definitions ignore the return type of the function and the return variable. The return variable defaults to integer in every case. It was reported at the LFortran issue tracker. You can check out the issue at <a href="https://gitlab.com/lfortran/lfortran/issues/138">#138</a></p>
 
-<p>Then, based on the fact if the function  had a body or not, we declare a Function Definition or a function prototype.</p>
+<h2 id="evaluation">Evaluation!!!</h2>
 
-<pre><code class="language-python">  if body == []:
-              function = FunctionPrototype(
-                  return_type = ret_type,
-                  name = node.spelling,
-                  parameters = param
-              )
-          else:
-              function = FunctionDefinition(
-                  return_type = ret_type,
-                  name = node.spelling,
-                  parameters = param,
-                  body = body
-  )
-</code></pre>
+<p><img src="https://sc0rpi0n101.github.io/img/eval_w9.jpg" alt="Evaluation meme" /></p>
 
-<h2 id="what-more">What More?</h2>
+<p>The primary goal of the project before the second evaluation was to complete the <em>Fortran parser</em> and get it ready to be merged in SymPy&rsquo;s master repository. As apparent from the above discussion, the parser has been completed including the documentation, tests, and examples for users; and LFortran has been packaged for <em>conda-forge</em> which completes all the requirements for the pull request being merge-ready.</p>
 
-<p><img src="https://sc0rpi0n101.github.io/img/ast_w6.jpg" alt="AST" /></p>
+<p>All that&rsquo;s left are a few <em>Travis</em> errors, including importing error that can be fixed soon and the pull request can be merged.  So, completing all the requirements of the project, I have successfully passed the second evaluation.</p>
 
-<p>There are still a lot of features that can be a part of the parser, some of which can be implemented with the current nodes available in <em>Clang and the Codegen AST</em>.
-Also, <em>Assignments</em> are missing from the <em>function body</em> because they create a different type of node in the <em>Clang AST</em> than the regular assignment nodes.</p>
+<h2 id="the-meeting">The meeting</h2>
 
-<p>These features include some of the loops like <em>for</em> and <em>while</em> loops. There are nodes available for these in both the _Clang and codegen AST_s. They can be implemented without any other requirements.</p>
+<p><img src="https://sc0rpi0n101.github.io/img/analyze_w9.jpg" alt="Analyze" /></p>
 
-<p>The <em>Printing/Output functions</em> whose node are present in the <em>codegen AST</em> would require working with including files and requires more work. The <em>codegen AST</em> doesn&rsquo;t have any nodes for <strong>Class declarations</strong> currently.</p>
+<p>The weekly meeting took place at the regular time this weekend and the progress for the week and Phase 2 was discussed. The <em><strong>Fortran Parser</strong> pull request</em> was reviewed and the changes and the tests were discussed. The <code>regex</code> tests were determined to be not efficient and comparing expressions was decided as the better alternative. The current progress of the lfortran packaging and Travis tests were also discussed along with SymPy&rsquo;s fcode printers and how it prints the expressions and statements. Then, the next week&rsquo;s plan was discussed. Here&rsquo;s the summary of the next week&rsquo;s plan:</p>
 
-<p><img src="https://sc0rpi0n101.github.io/img/no_class_w6.jpg" alt="No Classes" /></p>
+<ul>
+<li>Fix the problems with Travis and merge the Fortran Parser</li>
+<li>Repeat the same for the C parser and get that completed and merged.</li>
+<li>After both the PRs are merged, focus on extending the parser features.</li>
+</ul>
 
-<p>The variable transformations presently only use the basic types for <em>float</em> and <em>int</em>. There are multiple types present in both the ASTs regarding different sizes and types of integers and floating points which can also be implemented.</p>
+<h2 id="what-now">What Now</h2>
 
-<h2 id="the-missing-nodes">The Missing Nodes</h2>
+<p><img src="https://sc0rpi0n101.github.io/img/gsoc_w9.jpg" alt="gsoc" /></p>
 
-<p><img src="https://sc0rpi0n101.github.io/img/missing_w6.jpg" alt="Missing Nodes" /></p>
+<p>Now, the first step is to fix the errors in Travis and get the pull request finally merged. Then, repeat the same for the <em>C parser</em>. Revise the documentation for the parser, write some new examples, examine the previous tests, and create some new tests. The code for the parser can also be refactored to reduce redundant code and improve the efficiency of the parser.  Then, get the C parser pull request merged too.</p>
 
-<p>The <em>codegen AST</em> currently few of the nodes available in the <em>Clang AST</em> that can be implemented for code transformation. Some of the nodes include <em>Type nodes for <strong>Strings/Characters</strong></em>, there is a standalone node to declare Strings, but there are no type nodes for that.</p>
-
-<p>There are also no nodes related to classes currently like any type of <em>Class Declaration</em>, <em>constructors</em>, <em>destructors</em>, and any other related features.</p>
-
-<h2 id="the-meeting">The Meeting</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/no_meeting_w6.jpg" alt="No Meeting" /></p>
-
-<p>The meeting this week was on <em>July 4</em>, which is the <em>Independence Day</em> for the <em>United States of America</em>. So, the meeting could not take place this time and had to be postponed.</p>
-
-<p><strong>Happy Independence Day to anyone reading this from the US. Hope you all had a great time and celebrations.</strong></p>
-
-<h2 id="what-s-next">What&rsquo;s Next?</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/what_next_w6.jpg" alt="Next Parser" /></p>
-
-<p>The Parser in its current form, available <a href="https://github.com/sympy/sympy/pull/16974">here</a>, requires documentation and docstrings on the functions and classes present to make it more readable. It also requires a little more setup with Travis and in the setup files to make it merge ready. So, the first job for today and tomorrow is to make sure the PR passes all the tests and is up to the SymPy standards in tests and documentation. Then, repeat the same for the Fortran Parser.</p>
-
-<p><em><strong>Subscribe</strong> to the blog if you don&rsquo;t want to miss any important updates</em></p>
+<p>After both the parsers are successfully merged into <strong>SymPy</strong>, the next step would be to expand on the features available to the parsers. It would also include getting some feedback from the users and improving the <em>parsers</em> and their <em>API</em> based on how the users feel it would be more comfortable to use.</p>
 
               
             </div>
@@ -444,7 +393,7 @@ Also, <em>Assignments</em> are missing from the <em>function body</em> because t
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/07/week-7a-little-step-towards-consistency/" data-tooltip="Week 7:A Little Step Towards Consistency">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml"></span>
@@ -452,7 +401,7 @@ Also, <em>Assignments</em> are missing from the <em>function body</em> because t
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/" data-tooltip="Week 5: The Evaluation is here: End of Phase 1">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/07/week-8boys-we-got-a-plan./" data-tooltip="Week 8:Boys!! We got a Plan.">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -470,13 +419,13 @@ Also, <em>Assignments</em> are missing from the <em>function body</em> because t
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -524,7 +473,7 @@ Also, <em>Assignments</em> are missing from the <em>function body</em> because t
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/07/week-7a-little-step-towards-consistency/" data-tooltip="Week 7:A Little Step Towards Consistency">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml"></span>
@@ -532,7 +481,7 @@ Also, <em>Assignments</em> are missing from the <em>function body</em> because t
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/" data-tooltip="Week 5: The Evaluation is here: End of Phase 1">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/07/week-8boys-we-got-a-plan./" data-tooltip="Week 8:Boys!! We got a Plan.">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -550,13 +499,13 @@ Also, <em>Assignments</em> are missing from the <em>function body</em> because t
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -586,13 +535,13 @@ Also, <em>Assignments</em> are missing from the <em>function body</em> because t
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsc0rpi0n101.github.io%2F2019%2F07%2Fweek-6-the-most-chaotic-week-ever%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsc0rpi0n101.github.io%2F2019%2F07%2Fweek-9-its-the-evaluation-week%2F">
           <i class="fa fa-facebook-official"></i><span>%!(EXTRA string=Facebook)</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fsc0rpi0n101.github.io%2F2019%2F07%2Fweek-6-the-most-chaotic-week-ever%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fsc0rpi0n101.github.io%2F2019%2F07%2Fweek-9-its-the-evaluation-week%2F">
           <i class="fa fa-twitter"></i><span>%!(EXTRA string=Twitter)</span>
         </a>
       </li>
@@ -895,9 +844,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/sc0rpi0n101.github.io\/2019\/07\/week-6-the-most-chaotic-week-ever\/';
+          this.page.url = 'https:\/\/sc0rpi0n101.github.io\/2019\/07\/week-9-its-the-evaluation-week\/';
           
-            this.page.identifier = '\/2019\/07\/week-6-the-most-chaotic-week-ever\/'
+            this.page.identifier = '\/2019\/07\/week-9-its-the-evaluation-week\/'
           
         };
         (function() {
