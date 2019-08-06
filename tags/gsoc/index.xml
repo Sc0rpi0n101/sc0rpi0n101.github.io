@@ -6,10 +6,21 @@
     <description>Recent content in Gsoc on Sc0rpi0n&#39;s Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sc0rpi0n101.github.io/tags/gsoc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 10: The Finished Parser</title>
+      <link>https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/</guid>
+      <description>“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
+ The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.</description>
+    </item>
     
     <item>
       <title>Week 9: It&#39;s the Evaluation Week!!</title>
