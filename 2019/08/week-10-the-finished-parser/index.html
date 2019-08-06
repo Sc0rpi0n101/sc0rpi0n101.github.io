@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.54.0 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Nikhil Maan">
+<meta name="keywords" content="SymPy, GSoC, Parsing, Github, open source, Fortran, lfortran, blog, technology, open source, blog, gsoc, python, fortran, parsing, linux, sympy, programming, coding, coder, programmer">
+<meta name="description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
+ The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.">
+
+
+<meta property="og:description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
+ The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Week 10: The Finished Parser">
+<meta name="twitter:title" content="Week 10: The Finished Parser">
+<meta property="og:url" content="https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
+<meta property="twitter:url" content="https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
+<meta property="og:site_name" content="Sc0rpi0n&#39;s Journey">
+<meta property="og:description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
+ The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.">
+<meta name="twitter:description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
+ The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.">
+<meta property="og:locale" content="en">
+
+  
+    <meta property="article:published_time" content="2019-08-06T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-08-06T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="GSoC">
+    
+      <meta property="article:section" content="SymPy">
+    
+  
+  
+    
+      <meta property="article:tag" content="GSoC">
+    
+      <meta property="article:tag" content="Fortran">
+    
+      <meta property="article:tag" content="Open Source">
+    
+      <meta property="article:tag" content="Python">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@sc0rpi0n101">
+
+
+  <meta name="twitter:creator" content="@sc0rpi0n101">
+
+
+
+
+
+
+  <meta property="og:image" content="https://sc0rpi0n101.github.io/img/ti_w10.jpeg">
+  <meta property="twitter:image" content="https://sc0rpi0n101.github.io/img/ti_w10.jpeg">
+
+
+  <meta property="og:image" content="https://sc0rpi0n101.github.io/img/cover_w10.jpg">
+  <meta property="twitter:image" content="https://sc0rpi0n101.github.io/img/cover_w10.jpg">
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/09c361d84d4ca83334b5bc0a95ac8ad2?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/09c361d84d4ca83334b5bc0a95ac8ad2?s=640">
+
+
+    <title>Week 10: The Finished Parser</title>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7489937575773404",
+        enable_page_level_ads: true
+      });
+    </script>
+
+    <link rel="icon" href="favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://sc0rpi0n101.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-137340719-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://sc0rpi0n101.github.io/">Sc0rpi0n&#39;s Journey</a>
+  </div>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://sc0rpi0n101.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/09c361d84d4ca83334b5bc0a95ac8ad2?s=110" alt="" />
+        </a>
+        <h4 class="sidebar-profile-name">Nikhil Maan</h4>
+        
+          <h5 class="sidebar-profile-bio">Open Source Contributor | Python Developer | GSoC 19 Student</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://sc0rpi0n101.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://sc0rpi0n101.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://sc0rpi0n101.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://sc0rpi0n101.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://sc0rpi0n101.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/Sc0rpi0n101" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/8301646/nikhil-maan" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://sc0rpi0n101.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('/img/cover_w10.jpg')"
+       data-behavior="1">
+    
+      <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Week 10: The Finished Parser
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-08-06T00:00:00Z">
+        
+  
+  
+  
+    August 6, 2019
+
+
+      </time>
+    
+    
+  
+  
+    <span></span>
+    
+      <a class="category-link" href="https://sc0rpi0n101.github.io/categories/gsoc">GSoC</a>, 
+    
+      <a class="category-link" href="https://sc0rpi0n101.github.io/categories/sympy">SymPy</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="1"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+
+<blockquote>
+<p>“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.” <br/>
+    — Norman Augustine</p>
+</blockquote>
+
+<p>Welcome everyone, this is your host <em>Nikhil Maan</em> aka <strong>Sc0rpi0n101</strong> and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.</p>
+
+<ul>
+<li><a href="#the-week">The Week</a></li>
+<li><a href="#fortran-parser">Fortran Parser</a></li>
+<li><a href="#sympy-expression">SymPy Expression</a></li>
+<li><a href="#travis-builds">Travis Builds</a></li>
+<li><a href="#the-c-parser">The C Parser</a></li>
+<li><a href="#the-meeting">The Meeting</a></li>
+</ul>
+
+<h2 id="the-week">The Week</h2>
+
+<p><img src="https://sc0rpi0n101.github.io/img/week_w10.jpg" alt="Week" /></p>
+
+<p>This week began with me working on the C parser to finalize that. The Fortran Parser was passing all the tests except one. Then, I and the mentors focused on the Fortran parser and finishing the debugging before moving on to the C parser. So, the rest of the week was spent on debugging the Fortran parser and getting it to pass al the tests.</p>
+
+<h2 id="fortran-parser">Fortran Parser</h2>
+
+<p><img src="https://sc0rpi0n101.github.io/img/granny_w10.jpg" alt="Grandma Fortran Meme" /></p>
+
+<p><em>The <strong>Fortran Parser</strong></em> has finally been completed and the <em>Pull Request</em> passes all the tests. The sub-module <code>fortran</code> of SymPy&rsquo;s parsing module contains the implementation for the Parser in SymPy. The module will only handle the beck-end operations of Expression conversions and will not have any part to play in the Application Program Interface(API).</p>
+
+<p><img src="https://sc0rpi0n101.github.io/img/fun_w10.jpeg" alt="Fun Fortran" /></p>
+
+<p>The module consists of a Visitor Class <code>ASR2PyVisitor</code> which handles visiting the Abstract Syntax Representation(ASR) for the Fortran source code. The ASR is generated by LFortran and it&rsquo;s API is used to extract the ASR and visit its nodes. The different nodes present are processed and converted into the respective nodes in <em>SymPy&rsquo;s <strong>Codegen AST</strong></em>. The nodes are stored in a list chronologically.</p>
+
+<p>The list is then stored as a <code>SymPy Expression</code> object to be used in SymPy.</p>
+
+<h2 id="sympy-expression">SymPy Expression</h2>
+
+<p><img src="https://sc0rpi0n101.github.io/img/chal_w10.jpg" alt="Challenge" /></p>
+
+<p>The <strong>SymPyExpression</strong> class is a part of the <em>sym_expr</em> module in SymPy&rsquo;s Parsing module. It handles the API and all the interactions of the expressions present.</p>
+
+<p>The class is initialized either by providing the source code and mode as attributes which are used to generate the expressions from the provided source code. The class can be initialized without any source code and an empty list of expressions is created. Expressions can also be generated using <code>convert_to_expr</code>. The expressions can be converted to different languages&rsquo; source code using the provided functions like <em>convert_to_c, convert_to_python, and convert_to_fortran</em>.</p>
+
+<h2 id="travis-tests">Travis Tests</h2>
+
+<p><img src="https://sc0rpi0n101.github.io/img/debug_w10.png" alt="Debugging" /></p>
+
+<p><em>Travis</em> was set up for the parser and <strong>LFortran</strong> was packaged for <em>conda-forge</em> so that it could be installed in Travis. After completing the setup and installation, the build was passing most of the tests except one. The failing test was the sphinx test which was not able to identify <em>SymPyExpression</em> when <em>lfortran</em> was not installed. Multiple fixes were tried and the best solution was to use the decorator <code>doctests_depend_on</code>.</p>
+
+<p>Then, after that test was fixed and started passing, another test started failing. The build report showed the source of the error unrelated to changes in the pull request. A few of the last commits were reverted and rewritten and the test started passing. The error just vanished in thin air, I couldn&rsquo;t figure out why it occurred and what the source of error was.</p>
+
+<h2 id="the-c-parser">The C Parser</h2>
+
+<p><img src="https://sc0rpi0n101.github.io/img/pr_w10.jpg" alt="Pull Request testing" /></p>
+
+<p>Now that the <em>Fortran Parser</em> is completely ready to be merged, it&rsquo;s time to finalize the <em>C Parser</em> pull request. I have been adding sym_expr to the C parser and modifying the parser to be compatible with <em>SymPyExpression</em>. I have also started adding some expression comparison tests for the parser.</p>
+
+<p>The most important requirement right now is to get <strong>clang</strong> installed in <em>Travis</em> for the tests and revise the documentation.</p>
+
+<h2 id="the-meeting">The Meeting</h2>
+
+<p><img src="https://sc0rpi0n101.github.io/img/meet_w10.jpeg" alt="Meeting" /></p>
+
+<p>The meeting took place at the regular time this week and the problems with the <em>Fortran parser</em> were discussed. The <em>Travis builds</em> and the tests were discussed. The tests that passed and the new error were discussed and different ways to fix the errors were also discussed. Most of the meeting was focused on finishing the work in progress which was the <em>Fortran Parser</em>, then shift the focus to the <em>C parser</em>.</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small"></span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://sc0rpi0n101.github.io/tags/gsoc/">GSoC</a>
+
+  <a class="tag tag--primary tag--small" href="https://sc0rpi0n101.github.io/tags/fortran/">Fortran</a>
+
+  <a class="tag tag--primary tag--small" href="https://sc0rpi0n101.github.io/tags/open-source/">Open Source</a>
+
+  <a class="tag tag--primary tag--small" href="https://sc0rpi0n101.github.io/tags/python/">Python</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/" data-tooltip="Week 9: It&#39;s the Evaluation Week!!">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2019 Nikhil Maan. 
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/" data-tooltip="Week 9: It&#39;s the Evaluation Week!!">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsc0rpi0n101.github.io%2F2019%2F08%2Fweek-10-the-finished-parser%2F">
+          <i class="fa fa-facebook-official"></i><span>%!(EXTRA string=Facebook)</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fsc0rpi0n101.github.io%2F2019%2F08%2Fweek-10-the-finished-parser%2F">
+          <i class="fa fa-twitter"></i><span>%!(EXTRA string=Twitter)</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/09c361d84d4ca83334b5bc0a95ac8ad2?s=110" alt="" />
+    
+    <h4 id="about-card-name">Nikhil Maan</h4>
+    
+      <div id="about-card-bio">Open Source Contributor | Python Developer | GSoC 19 Student</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Student Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        India
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
+                <h3 class="media-heading">Week 10: The Finished Parser</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
+ The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/">
+                <h3 class="media-heading">Week 9: It&#39;s the Evaluation Week!!</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.
+ The Fortran Parser Traivs and the Tests LFortran Evaluation!!! The meeting What Now  The Fortran Parser The Fortran parser is finally complete after shifting to using SymPy&rsquo;s codegen AST. It can now parser all the stuff that the parser could do before shifting.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-8boys-we-got-a-plan./">
+                <h3 class="media-heading">Week 8:Boys!! We got a Plan.</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">&ldquo;Those who plan do better than those who do not plan even though they rarely stick to their plan.&rdquo; ― Winston Churchill
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week I have some good news for you all. We have got a few plans to get the progress of the project rolling as the second evaluation approaches. The meeting also took place this week, so, after waiting for so long, we have some good insights from the meeting this time.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-7a-little-step-towards-consistency/">
+                <h3 class="media-heading">Week 7:A Little Step Towards Consistency</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">“It&rsquo;s not what we do once in a while that shapes our lives. It&rsquo;s what we do consistently.”  ― Anthony Robbins
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week I&rsquo;ve tried to be more consistent with my schedule, work and communications with the Organization. I&rsquo;ve taken a few small steps and plan to improve as I keep working.
+ Consistency!? Merging the Pull Requests?</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
+                <h3 class="media-heading">Week 6: The Most Chaotic Week Ever!!</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/">
+                <h3 class="media-heading">Week 5: The Evaluation is here: End of Phase 1</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">&ldquo;On two occasions I have been asked [by members of Parliament!]: &lsquo;Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out ?&rsquo; I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.&rdquo; — Charles Babbage
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was the last week of Phase-1 and the evaluations for the first phase.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-4-the-fortran-parser-is-finally-here/">
+                <h3 class="media-heading">Week 4: The Fortran Parser is finally here</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">&ldquo;When someone says: &lsquo;I want a programming language in which I need only say what I wish done&rsquo;, give him a lollipop.&rdquo;  — Alan J. Perlis in Software Metrics
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week has been relatively a little odd. The week started a little slow but slowly it turned out to be a good and productive week.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/">
+                <h3 class="media-heading">Week 3: What&#39;s Happening? Where have I been?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">“How did it get so late so soon?”  ― Dr. Seuss
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we&rsquo;re running late on everything this week. This time we will talk about some operating system stuff along with the week&rsquo;s work. I will have more blogs on operating systems and that type of stuff soon. For now, let&rsquo;s talk about what&rsquo;s happening.
+Why so Late?</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-2-a-tale-of-the-illusive-pull-request/">
+                <h3 class="media-heading">Week 2: A Tale of The Illusive Pull Request</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">In real open source, you have the right to control your own destiny.  - Linus Torvalds
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will talk about the Week 2 of the coding period for GSoC 2019 and the story of the elusive pull requests which people had to wait almost the whole week for.
+The Weekend after the Meeting</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-0-communtiy-bonding-period-a-new-beginning/">
+                <h3 class="media-heading">Week 0: Communtiy Bonding Period - A new Beginning</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Empowerment of individuals is a key part of what makes open source work, since in the end, innovations tend to come from small groups, not from large, structured efforts.  - Tim O&rsquo;Reilly
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and today I would like to tell you about the Community Bonding Period of GSoC 2019 and also talk about my project and organization in detail.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         12 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://sc0rpi0n101.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://sc0rpi0n101.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/sc0rpi0n101.github.io\/2019\/08\/week-10-the-finished-parser\/';
+          
+            this.page.identifier = '\/2019\/08\/week-10-the-finished-parser\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'sc0rpi0n101';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
