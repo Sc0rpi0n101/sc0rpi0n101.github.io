@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gsoc on Sc0rpi0n&#39;s Journey</title>
+    <title>GSoC on Sc0rpi0n&#39;s Journey</title>
     <link>https://sc0rpi0n101.github.io/categories/gsoc/</link>
-    <description>Recent content in Gsoc on Sc0rpi0n&#39;s Journey</description>
+    <description>Recent content in GSoC on Sc0rpi0n&#39;s Journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sc0rpi0n101.github.io/categories/gsoc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 12: The Final Week</title>
+      <link>https://sc0rpi0n101.github.io/2019/08/week-12-the-final-week/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sc0rpi0n101.github.io/2019/08/week-12-the-final-week/</guid>
+      <description>“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week will be the last week of coding for GSoC 2019. It is time to finish work now.
+ The C Parser Travis Build Tests Documentation  The C Parser I completed the C Parser last week along with the documentation for the module.</description>
+    </item>
+    
+    <item>
+      <title>Week 11: The Other Parser</title>
+      <link>https://sc0rpi0n101.github.io/2019/08/week-11-the-other-parser/</link>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sc0rpi0n101.github.io/2019/08/week-11-the-other-parser/</guid>
+      <description>Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week we&amp;rsquo;re talking about the C parser.
+ The Fortran Parser The C Parser Documentation Travis Build  The Fortran Parser The Fortran Parser is complete. The Pull Request has also been merged. The parser is merged in master and will be a part of the next SymPy release. You can check out the source code for the Parser at the Pull Request.</description>
+    </item>
     
     <item>
       <title>Week 10: The Finished Parser</title>
