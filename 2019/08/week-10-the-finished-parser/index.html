@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="generator" content="Hugo 0.66.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Nikhil Maan">
-<meta name="keywords" content="SymPy, GSoC, Parsing, Github, open source, Fortran, lfortran, blog, technology, open source, blog, gsoc, python, fortran, parsing, linux, sympy, programming, coding, coder, programmer">
-<meta name="description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+<meta name="keywords" content="SymPy, GSoC, Parsing, Github, open source, Fortran, lfortran, blog, technology, open source, blog, gsoc, python, fortran, parsing, linux, sympy, programming, coding">
+<meta name="description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.” — Norman Augustine
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
  The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.">
 
 
-<meta property="og:description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+<meta property="og:description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.” — Norman Augustine
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
  The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.">
 <meta property="og:type" content="article">
@@ -22,10 +22,10 @@
 <meta property="og:url" content="https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
 <meta property="twitter:url" content="https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
 <meta property="og:site_name" content="Sc0rpi0n&#39;s Journey">
-<meta property="og:description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+<meta property="og:description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.” — Norman Augustine
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
  The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.">
-<meta name="twitter:description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+<meta name="twitter:description" content="“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.” — Norman Augustine
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
  The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.">
 <meta property="og:locale" content="en">
@@ -106,8 +106,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://sc0rpi0n101.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    <link rel="stylesheet" href="https://sc0rpi0n101.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
+    
+      
+        <link rel="stylesheet"  href="https://sc0rpi0n101.github.io/css/mystyle.css">
+      
     
 
     
@@ -300,15 +304,11 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
-
-<blockquote>
-<p>“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.” <br/>
-    — Norman Augustine</p>
+              <blockquote>
+<p>“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.” <!-- raw HTML omitted -->
+— Norman Augustine</p>
 </blockquote>
-
 <p>Welcome everyone, this is your host <em>Nikhil Maan</em> aka <strong>Sc0rpi0n101</strong> and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.</p>
-
 <ul>
 <li><a href="#the-week">The Week</a></li>
 <li><a href="#fortran-parser">Fortran Parser</a></li>
@@ -317,53 +317,29 @@ if (!doNotTrack) {
 <li><a href="#the-c-parser">The C Parser</a></li>
 <li><a href="#the-meeting">The Meeting</a></li>
 </ul>
-
 <h2 id="the-week">The Week</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/week_w10.jpg" alt="Week" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/week_w10.jpg" alt="Week"></p>
 <p>This week began with me working on the C parser to finalize that. The Fortran Parser was passing all the tests except one. Then, I and the mentors focused on the Fortran parser and finishing the debugging before moving on to the C parser. So, the rest of the week was spent on debugging the Fortran parser and getting it to pass al the tests.</p>
-
 <h2 id="fortran-parser">Fortran Parser</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/granny_w10.jpg" alt="Grandma Fortran Meme" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/granny_w10.jpg" alt="Grandma Fortran Meme"></p>
 <p><em>The <strong>Fortran Parser</strong></em> has finally been completed and the <em>Pull Request</em> passes all the tests. The sub-module <code>fortran</code> of SymPy&rsquo;s parsing module contains the implementation for the Parser in SymPy. The module will only handle the beck-end operations of Expression conversions and will not have any part to play in the Application Program Interface(API).</p>
-
-<p><img src="https://sc0rpi0n101.github.io/img/fun_w10.jpeg" alt="Fun Fortran" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/fun_w10.jpeg" alt="Fun Fortran"></p>
 <p>The module consists of a Visitor Class <code>ASR2PyVisitor</code> which handles visiting the Abstract Syntax Representation(ASR) for the Fortran source code. The ASR is generated by LFortran and it&rsquo;s API is used to extract the ASR and visit its nodes. The different nodes present are processed and converted into the respective nodes in <em>SymPy&rsquo;s <strong>Codegen AST</strong></em>. The nodes are stored in a list chronologically.</p>
-
 <p>The list is then stored as a <code>SymPy Expression</code> object to be used in SymPy.</p>
-
 <h2 id="sympy-expression">SymPy Expression</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/chal_w10.jpg" alt="Challenge" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/chal_w10.jpg" alt="Challenge"></p>
 <p>The <strong>SymPyExpression</strong> class is a part of the <em>sym_expr</em> module in SymPy&rsquo;s Parsing module. It handles the API and all the interactions of the expressions present.</p>
-
 <p>The class is initialized either by providing the source code and mode as attributes which are used to generate the expressions from the provided source code. The class can be initialized without any source code and an empty list of expressions is created. Expressions can also be generated using <code>convert_to_expr</code>. The expressions can be converted to different languages&rsquo; source code using the provided functions like <em>convert_to_c, convert_to_python, and convert_to_fortran</em>.</p>
-
 <h2 id="travis-tests">Travis Tests</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/debug_w10.png" alt="Debugging" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/debug_w10.png" alt="Debugging"></p>
 <p><em>Travis</em> was set up for the parser and <strong>LFortran</strong> was packaged for <em>conda-forge</em> so that it could be installed in Travis. After completing the setup and installation, the build was passing most of the tests except one. The failing test was the sphinx test which was not able to identify <em>SymPyExpression</em> when <em>lfortran</em> was not installed. Multiple fixes were tried and the best solution was to use the decorator <code>doctests_depend_on</code>.</p>
-
 <p>Then, after that test was fixed and started passing, another test started failing. The build report showed the source of the error unrelated to changes in the pull request. A few of the last commits were reverted and rewritten and the test started passing. The error just vanished in thin air, I couldn&rsquo;t figure out why it occurred and what the source of error was.</p>
-
 <h2 id="the-c-parser">The C Parser</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/pr_w10.jpg" alt="Pull Request testing" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/pr_w10.jpg" alt="Pull Request testing"></p>
 <p>Now that the <em>Fortran Parser</em> is completely ready to be merged, it&rsquo;s time to finalize the <em>C Parser</em> pull request. I have been adding sym_expr to the C parser and modifying the parser to be compatible with <em>SymPyExpression</em>. I have also started adding some expression comparison tests for the parser.</p>
-
 <p>The most important requirement right now is to get <strong>clang</strong> installed in <em>Travis</em> for the tests and revise the documentation.</p>
-
 <h2 id="the-meeting">The Meeting</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/meet_w10.jpeg" alt="Meeting" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/meet_w10.jpeg" alt="Meeting"></p>
 <p>The meeting took place at the regular time this week and the problems with the <em>Fortran parser</em> were discussed. The <em>Travis builds</em> and the tests were discussed. The tests that passed and the new error were discussed and different ways to fix the errors were also discussed. Most of the meeting was focused on finishing the work in progress which was the <em>Fortran Parser</em>, then shift the focus to the <em>C parser</em>.</p>
 
               
@@ -463,7 +439,7 @@ if (!doNotTrack) {
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 Nikhil Maan. 
+    &copy; 2020 Nikhil Maan. 
   </span>
 </footer>
 
@@ -583,225 +559,13 @@ if (!doNotTrack) {
   </div>
 </div>
 
-    <div id="algolia-search-modal" class="modal-container">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="close-button"><i class="fa fa-close"></i></span>
-      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-        <span class="searchby-algolia-text text-color-light text-small">by</span>
-        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
-      </a>
-      <i class="search-icon fa fa-search"></i>
-      <form id="algolia-search-form">
-        <input type="text" id="algolia-search-input" name="search"
-          class="form-control input--large search-input" placeholder="" />
-      </form>
-    </div>
-    <div class="modal-body">
-      <div class="no-result text-color-light text-center"></div>
-      <div class="results">
-        
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/08/week-12-the-final-week/">
-                <h3 class="media-heading">Week 12: The Final Week</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Aug 8, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week will be the last week of coding for GSoC 2019. It is time to finish work now.
- The C Parser Travis Build Tests Documentation  The C Parser I completed the C Parser last week along with the documentation for the module.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/08/week-11-the-other-parser/">
-                <h3 class="media-heading">Week 11: The Other Parser</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Aug 8, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week we&rsquo;re talking about the C parser.
- The Fortran Parser The C Parser Documentation Travis Build  The Fortran Parser The Fortran Parser is complete. The Pull Request has also been merged. The parser is merged in master and will be a part of the next SymPy release. You can check out the source code for the Parser at the Pull Request.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
-                <h3 class="media-heading">Week 10: The Finished Parser</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Aug 8, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
- The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/">
-                <h3 class="media-heading">Week 9: It&#39;s the Evaluation Week!!</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jul 7, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.
- The Fortran Parser Traivs and the Tests LFortran Evaluation!!! The meeting What Now  The Fortran Parser The Fortran parser is finally complete after shifting to using SymPy&rsquo;s codegen AST. It can now parser all the stuff that the parser could do before shifting.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-8boys-we-got-a-plan./">
-                <h3 class="media-heading">Week 8:Boys!! We got a Plan.</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jul 7, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">&ldquo;Those who plan do better than those who do not plan even though they rarely stick to their plan.&rdquo; ― Winston Churchill
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week I have some good news for you all. We have got a few plans to get the progress of the project rolling as the second evaluation approaches. The meeting also took place this week, so, after waiting for so long, we have some good insights from the meeting this time.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-7a-little-step-towards-consistency/">
-                <h3 class="media-heading">Week 7:A Little Step Towards Consistency</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jul 7, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">“It&rsquo;s not what we do once in a while that shapes our lives. It&rsquo;s what we do consistently.”  ― Anthony Robbins
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week I&rsquo;ve tried to be more consistent with my schedule, work and communications with the Organization. I&rsquo;ve taken a few small steps and plan to improve as I keep working.
- Consistency!? Merging the Pull Requests?</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
-                <h3 class="media-heading">Week 6: The Most Chaotic Week Ever!!</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jul 7, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/">
-                <h3 class="media-heading">Week 5: The Evaluation is here: End of Phase 1</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">&ldquo;On two occasions I have been asked [by members of Parliament!]: &lsquo;Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out ?&rsquo; I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.&rdquo; — Charles Babbage
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was the last week of Phase-1 and the evaluations for the first phase.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-4-the-fortran-parser-is-finally-here/">
-                <h3 class="media-heading">Week 4: The Fortran Parser is finally here</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">&ldquo;When someone says: &lsquo;I want a programming language in which I need only say what I wish done&rsquo;, give him a lollipop.&rdquo;  — Alan J. Perlis in Software Metrics
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week has been relatively a little odd. The week started a little slow but slowly it turned out to be a good and productive week.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/">
-                <h3 class="media-heading">Week 3: What&#39;s Happening? Where have I been?</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">“How did it get so late so soon?”  ― Dr. Seuss
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we&rsquo;re running late on everything this week. This time we will talk about some operating system stuff along with the week&rsquo;s work. I will have more blogs on operating systems and that type of stuff soon. For now, let&rsquo;s talk about what&rsquo;s happening.
-Why so Late?</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-      </div>
-    </div>
-    <div class="modal-footer">
-      <p class="results-count text-medium"
-         data-message-zero=""
-         data-message-one=""
-         data-message-other="">
-         14 posts found
-      </p>
-    </div>
-  </div>
-</div>
+    
+
     
   
     
-    <div id="cover" style="background-image:url('https://sc0rpi0n101.github.io/images/cover.jpg');"></div>
+      <div id="cover" style="background-image:url('https://sc0rpi0n101.github.io/cover.jpg');"></div>
+    
   
 
 
@@ -813,7 +577,7 @@ Why so Late?</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://sc0rpi0n101.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+<script src="https://sc0rpi0n101.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

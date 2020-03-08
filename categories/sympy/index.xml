@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SymPy on Sc0rpi0n&#39;s Journey</title>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/08/week-12-the-final-week/</guid>
-      <description>“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+      <description>“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.” — Norman Augustine
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week will be the last week of coding for GSoC 2019. It is time to finish work now.
  The C Parser Travis Build Tests Documentation  The C Parser I completed the C Parser last week along with the documentation for the module.</description>
     </item>
@@ -38,7 +38,7 @@
       <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/</guid>
-      <description>“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
+      <description>“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.” — Norman Augustine
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
  The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.</description>
     </item>
@@ -59,7 +59,7 @@
       <pubDate>Sat, 20 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/07/week-8boys-we-got-a-plan./</guid>
-      <description>&amp;ldquo;Those who plan do better than those who do not plan even though they rarely stick to their plan.&amp;rdquo; ― Winston Churchill
+      <description>&amp;ldquo;Those who plan do better than those who do not plan even though they rarely stick to their plan.&amp;ldquo;― Winston Churchill
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week I have some good news for you all. We have got a few plans to get the progress of the project rolling as the second evaluation approaches. The meeting also took place this week, so, after waiting for so long, we have some good insights from the meeting this time.</description>
     </item>
     
@@ -69,7 +69,7 @@
       <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/07/week-7a-little-step-towards-consistency/</guid>
-      <description>“It&amp;rsquo;s not what we do once in a while that shapes our lives. It&amp;rsquo;s what we do consistently.”  ― Anthony Robbins
+      <description>“It&amp;rsquo;s not what we do once in a while that shapes our lives. It&amp;rsquo;s what we do consistently.” ― Anthony Robbins
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week I&amp;rsquo;ve tried to be more consistent with my schedule, work and communications with the Organization. I&amp;rsquo;ve taken a few small steps and plan to improve as I keep working.
  Consistency!? Merging the Pull Requests?</description>
     </item>
@@ -80,7 +80,7 @@
       <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/</guid>
-      <description>“A language that doesn&amp;rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
+      <description>“A language that doesn&amp;rsquo;t affect the way you think about programming is not worth knowing.” ― Alan J. Perlis
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&amp;rsquo;s Codegen AST from Python AST all in one week.</description>
     </item>
     
@@ -90,7 +90,7 @@
       <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/</guid>
-      <description>&amp;ldquo;On two occasions I have been asked [by members of Parliament!]: &amp;lsquo;Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out ?&amp;rsquo; I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.&amp;rdquo; — Charles Babbage
+      <description>&amp;ldquo;On two occasions I have been asked [by members of Parliament!]: &amp;lsquo;Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out ?&amp;rsquo; I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.&amp;ldquo;— Charles Babbage
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was the last week of Phase-1 and the evaluations for the first phase.</description>
     </item>
     
@@ -100,8 +100,9 @@
       <pubDate>Sat, 22 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/06/week-4-the-fortran-parser-is-finally-here/</guid>
-      <description>&amp;ldquo;When someone says: &amp;lsquo;I want a programming language in which I need only say what I wish done&amp;rsquo;, give him a lollipop.&amp;rdquo;  — Alan J. Perlis in Software Metrics
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week has been relatively a little odd. The week started a little slow but slowly it turned out to be a good and productive week.</description>
+      <description>&amp;ldquo;When someone says: &amp;lsquo;I want a programming language in which I need only say what I wish done&amp;rsquo;, give him a lollipop.&amp;rdquo; — Alan J. Perlis in Software Metrics
+ Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week has been relatively a little odd. The week started a little slow but slowly it turned out to be a good and productive week.
+ A Slow Start LFortran Testing Finally, The Missing Pull Request The Long Awaited Meeting What now?</description>
     </item>
     
     <item>
@@ -110,9 +111,9 @@
       <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/</guid>
-      <description>“How did it get so late so soon?”  ― Dr. Seuss
+      <description>“How did it get so late so soon?” ― Dr. Seuss
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we&amp;rsquo;re running late on everything this week. This time we will talk about some operating system stuff along with the week&amp;rsquo;s work. I will have more blogs on operating systems and that type of stuff soon. For now, let&amp;rsquo;s talk about what&amp;rsquo;s happening.
-Why so Late?</description>
+Why so Late? What about Work?</description>
     </item>
     
     <item>
@@ -121,9 +122,10 @@ Why so Late?</description>
       <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/06/week-2-a-tale-of-the-illusive-pull-request/</guid>
-      <description>In real open source, you have the right to control your own destiny.  - Linus Torvalds
+      <description>In real open source, you have the right to control your own destiny. - Linus Torvalds
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will talk about the Week 2 of the coding period for GSoC 2019 and the story of the elusive pull requests which people had to wait almost the whole week for.
-The Weekend after the Meeting</description>
+The Weekend after the Meeting
+A Bad Start</description>
     </item>
     
     <item>
@@ -132,7 +134,7 @@ The Weekend after the Meeting</description>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/06/week-0-communtiy-bonding-period-a-new-beginning/</guid>
-      <description>Empowerment of individuals is a key part of what makes open source work, since in the end, innovations tend to come from small groups, not from large, structured efforts.  - Tim O&amp;rsquo;Reilly
+      <description>Empowerment of individuals is a key part of what makes open source work, since in the end, innovations tend to come from small groups, not from large, structured efforts. - Tim O&amp;rsquo;Reilly
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and today I would like to tell you about the Community Bonding Period of GSoC 2019 and also talk about my project and organization in detail.</description>
     </item>
     
@@ -142,8 +144,8 @@ The Weekend after the Meeting</description>
       <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/05/week-1-let-the-grind-begin/</guid>
-      <description>The joy of coding Python should be in seeing short, concise, readable classes that express a lot of action in a small amount of clear code, not in reams of trivial code that bores the reader to death  - Guido van Rossum
- Welcome everyone, I am your host Nikhil Maan aka Sc0rpi0n101 and I will be barraging you with blogs of my progress with my GSoC project.</description>
+      <description>The joy of coding Python should be in seeing short, concise, readable classes that express a lot of action in a small amount of clear code, not in reams of trivial code that bores the reader to death - Guido van Rossum
+ Welcome everyone, I am your host Nikhil Maan aka Sc0rpi0n101 and I will be barraging you with blogs of my progress with my GSoC project. This is the blog for the first week of work.</description>
     </item>
     
   </channel>

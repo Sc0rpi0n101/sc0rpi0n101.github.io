@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Parsing on Sc0rpi0n&#39;s Journey</title>
@@ -17,9 +17,10 @@
       <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/06/week-2-a-tale-of-the-illusive-pull-request/</guid>
-      <description>In real open source, you have the right to control your own destiny.  - Linus Torvalds
+      <description>In real open source, you have the right to control your own destiny. - Linus Torvalds
  Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will talk about the Week 2 of the coding period for GSoC 2019 and the story of the elusive pull requests which people had to wait almost the whole week for.
-The Weekend after the Meeting</description>
+The Weekend after the Meeting
+A Bad Start</description>
     </item>
     
     <item>
@@ -28,8 +29,8 @@ The Weekend after the Meeting</description>
       <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://sc0rpi0n101.github.io/2019/05/week-1-let-the-grind-begin/</guid>
-      <description>The joy of coding Python should be in seeing short, concise, readable classes that express a lot of action in a small amount of clear code, not in reams of trivial code that bores the reader to death  - Guido van Rossum
- Welcome everyone, I am your host Nikhil Maan aka Sc0rpi0n101 and I will be barraging you with blogs of my progress with my GSoC project.</description>
+      <description>The joy of coding Python should be in seeing short, concise, readable classes that express a lot of action in a small amount of clear code, not in reams of trivial code that bores the reader to death - Guido van Rossum
+ Welcome everyone, I am your host Nikhil Maan aka Sc0rpi0n101 and I will be barraging you with blogs of my progress with my GSoC project. This is the blog for the first week of work.</description>
     </item>
     
   </channel>

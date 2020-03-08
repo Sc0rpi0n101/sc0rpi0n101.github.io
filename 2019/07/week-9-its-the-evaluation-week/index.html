@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="generator" content="Hugo 0.66.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Nikhil Maan">
-<meta name="keywords" content="SymPy, GSoC, Parsing, Github, open source, Fortran, lfortran, blog, technology, open source, blog, gsoc, python, fortran, parsing, linux, sympy, programming, coding, coder, programmer">
+<meta name="keywords" content="SymPy, GSoC, Parsing, Github, open source, Fortran, lfortran, blog, technology, open source, blog, gsoc, python, fortran, parsing, linux, sympy, programming, coding">
 <meta name="description" content="Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.
  The Fortran Parser Traivs and the Tests LFortran Evaluation!!! The meeting What Now  The Fortran Parser The Fortran parser is finally complete after shifting to using SymPy&rsquo;s codegen AST. It can now parser all the stuff that the parser could do before shifting.">
 
@@ -102,8 +102,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://sc0rpi0n101.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    <link rel="stylesheet" href="https://sc0rpi0n101.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
+    
+      
+        <link rel="stylesheet"  href="https://sc0rpi0n101.github.io/css/mystyle.css">
+      
     
 
     
@@ -296,10 +300,7 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
-
-<p>Welcome everyone, this is your host <em>Nikhil Maan</em> aka <strong>Sc0rpi0n101</strong> and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.</p>
-
+              <p>Welcome everyone, this is your host <em>Nikhil Maan</em> aka <strong>Sc0rpi0n101</strong> and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.</p>
 <ul>
 <li><a href="#the-fortran-parser">The Fortran Parser</a></li>
 <li><a href="#travis-and-the-tests">Traivs and the Tests</a></li>
@@ -308,59 +309,34 @@ if (!doNotTrack) {
 <li><a href="#the-meeting">The meeting</a></li>
 <li><a href="#what-now">What Now</a></li>
 </ul>
-
 <h2 id="the-fortran-parser">The Fortran Parser</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/eval1_w9.jpg" alt="Evaluation Parser" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/eval1_w9.jpg" alt="Evaluation Parser"></p>
 <p>The Fortran parser is finally complete after shifting to using SymPy&rsquo;s <em>codegen AST</em>. It can now parser all the stuff that the parser could do before shifting. The <em>assignment</em> and <em>binary operations</em> transformations have also been implemented. All the files have been documented and revised, examples and doctests have been added to help new users. Appropriate tests have also been prepared to cover all the conversions of the parser. The implementations for numbers are also ready, but commented out and can be used as soon as numbers are represented in the <em>ASR</em>. The last thing left to do before merging the <em>Pull Request</em> to get the tests passing through <strong>Travis CI</strong>.</p>
-
 <h2 id="travis-and-the-tests">Travis and the Tests</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/build_w9.jpg" alt="Build" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/build_w9.jpg" alt="Build"></p>
 <p><strong>Travis</strong> is currently not passing the doctests as <em>lfortran</em> does not seem to be imported correctly in the <em>sphinx</em> tests. The rest of the tests are passing successfully both on Travis and on my local machine.</p>
-
-<p><img src="https://sc0rpi0n101.github.io/img/testing_w9.jpg" alt="Testing" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/testing_w9.jpg" alt="Testing"></p>
 <p>The tests were initially written using <code>regex</code> to compare the <em>Expression</em> statements. But, <code>regex</code> tests are found to be fragile and hard to write and have to be dependent on how they are printed. So, the tests now consist of testing if the expressions belong to the right classes and comparing the whole expressions with the desired results.  The <em>expression comparison</em> is more robust and can be used to test all the aspects of the expression without being dependent on how the expressions are printed.</p>
-
 <h2 id="lfortran">LFortran</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/pack_w9.jpg" alt="Packaging" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/pack_w9.jpg" alt="Packaging"></p>
 <p><strong>LFortran</strong> has been packaged for the <em>conda-forge</em> and can be installed on <em>Travis</em> successfully as a conda package. The current version of <em>LFortran(<strong>v 0.1.15</strong>)</em> with all its present features can be installed on any system using <em>Anaconda</em>.</p>
-
-<p><img src="https://sc0rpi0n101.github.io/img/bug_w9.jpg" alt="Bug" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/bug_w9.jpg" alt="Bug"></p>
 <p>While working with Functions in LFortran, I also encountered a new bug. The Function Definitions ignore the return type of the function and the return variable. The return variable defaults to integer in every case. It was reported at the LFortran issue tracker. You can check out the issue at <a href="https://gitlab.com/lfortran/lfortran/issues/138">#138</a></p>
-
 <h2 id="evaluation">Evaluation!!!</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/eval_w9.jpg" alt="Evaluation meme" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/eval_w9.jpg" alt="Evaluation meme"></p>
 <p>The primary goal of the project before the second evaluation was to complete the <em>Fortran parser</em> and get it ready to be merged in SymPy&rsquo;s master repository. As apparent from the above discussion, the parser has been completed including the documentation, tests, and examples for users; and LFortran has been packaged for <em>conda-forge</em> which completes all the requirements for the pull request being merge-ready.</p>
-
 <p>All that&rsquo;s left are a few <em>Travis</em> errors, including importing error that can be fixed soon and the pull request can be merged.  So, completing all the requirements of the project, I have successfully passed the second evaluation.</p>
-
 <h2 id="the-meeting">The meeting</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/analyze_w9.jpg" alt="Analyze" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/analyze_w9.jpg" alt="Analyze"></p>
 <p>The weekly meeting took place at the regular time this weekend and the progress for the week and Phase 2 was discussed. The <em><strong>Fortran Parser</strong> pull request</em> was reviewed and the changes and the tests were discussed. The <code>regex</code> tests were determined to be not efficient and comparing expressions was decided as the better alternative. The current progress of the lfortran packaging and Travis tests were also discussed along with SymPy&rsquo;s fcode printers and how it prints the expressions and statements. Then, the next week&rsquo;s plan was discussed. Here&rsquo;s the summary of the next week&rsquo;s plan:</p>
-
 <ul>
 <li>Fix the problems with Travis and merge the Fortran Parser</li>
 <li>Repeat the same for the C parser and get that completed and merged.</li>
 <li>After both the PRs are merged, focus on extending the parser features.</li>
 </ul>
-
 <h2 id="what-now">What Now</h2>
-
-<p><img src="https://sc0rpi0n101.github.io/img/gsoc_w9.jpg" alt="gsoc" /></p>
-
+<p><img src="https://sc0rpi0n101.github.io/img/gsoc_w9.jpg" alt="gsoc"></p>
 <p>Now, the first step is to fix the errors in Travis and get the pull request finally merged. Then, repeat the same for the <em>C parser</em>. Revise the documentation for the parser, write some new examples, examine the previous tests, and create some new tests. The code for the parser can also be refactored to reduce redundant code and improve the efficiency of the parser.  Then, get the C parser pull request merged too.</p>
-
 <p>After both the parsers are successfully merged into <strong>SymPy</strong>, the next step would be to expand on the features available to the parsers. It would also include getting some feedback from the users and improving the <em>parsers</em> and their <em>API</em> based on how the users feel it would be more comfortable to use.</p>
 
               
@@ -460,7 +436,7 @@ if (!doNotTrack) {
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 Nikhil Maan. 
+    &copy; 2020 Nikhil Maan. 
   </span>
 </footer>
 
@@ -580,225 +556,13 @@ if (!doNotTrack) {
   </div>
 </div>
 
-    <div id="algolia-search-modal" class="modal-container">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="close-button"><i class="fa fa-close"></i></span>
-      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-        <span class="searchby-algolia-text text-color-light text-small">by</span>
-        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
-      </a>
-      <i class="search-icon fa fa-search"></i>
-      <form id="algolia-search-form">
-        <input type="text" id="algolia-search-input" name="search"
-          class="form-control input--large search-input" placeholder="" />
-      </form>
-    </div>
-    <div class="modal-body">
-      <div class="no-result text-color-light text-center"></div>
-      <div class="results">
-        
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/08/week-12-the-final-week/">
-                <h3 class="media-heading">Week 12: The Final Week</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Aug 8, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week will be the last week of coding for GSoC 2019. It is time to finish work now.
- The C Parser Travis Build Tests Documentation  The C Parser I completed the C Parser last week along with the documentation for the module.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/08/week-11-the-other-parser/">
-                <h3 class="media-heading">Week 11: The Other Parser</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Aug 8, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week we&rsquo;re talking about the C parser.
- The Fortran Parser The C Parser Documentation Travis Build  The Fortran Parser The Fortran Parser is complete. The Pull Request has also been merged. The parser is merged in master and will be a part of the next SymPy release. You can check out the source code for the Parser at the Pull Request.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/08/week-10-the-finished-parser/">
-                <h3 class="media-heading">Week 10: The Finished Parser</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Aug 8, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">“Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics; i.e., it always increases.”  — Norman Augustine
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we will talk all about the Fortran Parser this week. I have passed the second evaluation and Fortran Parser pull request is complete.
- The Week Fortran Parser SymPy Expression Travis Builds The C Parser The Meeting  The Week This week began with me working on the C parser to finalize that.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-9-its-the-evaluation-week/">
-                <h3 class="media-heading">Week 9: It&#39;s the Evaluation Week!!</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jul 7, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this time we will be talking about the second evaluation for GSoC. The main objective of the week was to get the Fortran parser ready.
- The Fortran Parser Traivs and the Tests LFortran Evaluation!!! The meeting What Now  The Fortran Parser The Fortran parser is finally complete after shifting to using SymPy&rsquo;s codegen AST. It can now parser all the stuff that the parser could do before shifting.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-8boys-we-got-a-plan./">
-                <h3 class="media-heading">Week 8:Boys!! We got a Plan.</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jul 7, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">&ldquo;Those who plan do better than those who do not plan even though they rarely stick to their plan.&rdquo; ― Winston Churchill
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week I have some good news for you all. We have got a few plans to get the progress of the project rolling as the second evaluation approaches. The meeting also took place this week, so, after waiting for so long, we have some good insights from the meeting this time.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-7a-little-step-towards-consistency/">
-                <h3 class="media-heading">Week 7:A Little Step Towards Consistency</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jul 7, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">“It&rsquo;s not what we do once in a while that shapes our lives. It&rsquo;s what we do consistently.”  ― Anthony Robbins
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week I&rsquo;ve tried to be more consistent with my schedule, work and communications with the Organization. I&rsquo;ve taken a few small steps and plan to improve as I keep working.
- Consistency!? Merging the Pull Requests?</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/07/week-6-the-most-chaotic-week-ever/">
-                <h3 class="media-heading">Week 6: The Most Chaotic Week Ever!!</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jul 7, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">“A language that doesn&rsquo;t affect the way you think about programming is not worth knowing.”  ― Alan J. Perlis
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was one of the most chaotic weeks till now if not the most chaotic. I had to move places as the Uni opens next week, had the summer classes exams and had to convert the C parser to use SymPy&rsquo;s Codegen AST from Python AST all in one week.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-5-the-evaluation-is-here-end-of-phase-1/">
-                <h3 class="media-heading">Week 5: The Evaluation is here: End of Phase 1</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">&ldquo;On two occasions I have been asked [by members of Parliament!]: &lsquo;Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out ?&rsquo; I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.&rdquo; — Charles Babbage
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week was the last week of Phase-1 and the evaluations for the first phase.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-4-the-fortran-parser-is-finally-here/">
-                <h3 class="media-heading">Week 4: The Fortran Parser is finally here</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">&ldquo;When someone says: &lsquo;I want a programming language in which I need only say what I wish done&rsquo;, give him a lollipop.&rdquo;  — Alan J. Perlis in Software Metrics
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and this week has been relatively a little odd. The week started a little slow but slowly it turned out to be a good and productive week.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://sc0rpi0n101.github.io/2019/06/week-3-whats-happening-where-have-i-been/">
-                <h3 class="media-heading">Week 3: What&#39;s Happening? Where have I been?</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">“How did it get so late so soon?”  ― Dr. Seuss
- Welcome everyone, this is your host Nikhil Maan aka Sc0rpi0n101 and we&rsquo;re running late on everything this week. This time we will talk about some operating system stuff along with the week&rsquo;s work. I will have more blogs on operating systems and that type of stuff soon. For now, let&rsquo;s talk about what&rsquo;s happening.
-Why so Late?</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-      </div>
-    </div>
-    <div class="modal-footer">
-      <p class="results-count text-medium"
-         data-message-zero=""
-         data-message-one=""
-         data-message-other="">
-         14 posts found
-      </p>
-    </div>
-  </div>
-</div>
+    
+
     
   
     
-    <div id="cover" style="background-image:url('https://sc0rpi0n101.github.io/images/cover.jpg');"></div>
+      <div id="cover" style="background-image:url('https://sc0rpi0n101.github.io/cover.jpg');"></div>
+    
   
 
 
@@ -810,7 +574,7 @@ Why so Late?</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://sc0rpi0n101.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+<script src="https://sc0rpi0n101.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">
